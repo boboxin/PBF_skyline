@@ -1,0 +1,146 @@
+=== Test how dimension of data affect running time ===
+========== Data dimension = 2 ==========
+---------- Brute force ----------
+Files removed
+--- 2370.7975182533264 seconds ---
+---------- Update ----------
+Files removed
+--- 1084.8019819259644 seconds ---
+========== Data dimension = 3 ==========
+---------- Brute force ----------
+Files removed
+--- 2539.738944530487 seconds ---
+---------- Update ----------
+Files removed
+--- 1369.0908539295197 seconds ---
+========== Data dimension = 4 ==========
+---------- Brute force ----------
+Files removed
+--- 2039.1635658740997 seconds ---
+---------- Update ----------
+Files removed
+--- 1306.8516156673431 seconds ---
+========== Data dimension = 5 ==========
+---------- Brute force ----------
+Files removed
+--- 1258.7830276489258 seconds ---
+---------- Update ----------
+Files removed
+--- 919.4527387619019 seconds ---
+========== Data dimension = 6 ==========
+---------- Brute force ----------
+Files removed
+--- 764.3353941440582 seconds ---
+---------- Update ----------
+Files removed
+--- 612.9482634067535 seconds ---
+========== Data dimension = 7 ==========
+---------- Brute force ----------
+Files removed
+--- 479.8416063785553 seconds ---
+---------- Update ----------
+Files removed
+--- 400.46142745018005 seconds ---
+========== Data dimension = 8 ==========
+---------- Brute force ----------
+Files removed
+--- 355.74349427223206 seconds ---
+---------- Update ----------
+Files removed
+--- 306.4628429412842 seconds ---
+========== Data dimension = 9 ==========
+---------- Brute force ----------
+Files removed
+--- 269.593624830246 seconds ---
+---------- Update ----------
+Files removed
+--- 241.87582850456238 seconds ---
+========== Data dimension = 10 ==========
+---------- Brute force ----------
+Files removed
+--- 232.93961334228516 seconds ---
+---------- Update ----------
+Files removed
+--- 214.64383625984192 seconds ---
+=== Test how dimension of data affect candidate size ===
+========== Data dimension = 2 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 12.9681
+Avg. sky2: 14.2019
+---------- Update ----------
+Files removed
+Avg. sky1: 12.8655
+Avg. sky2: 11.8994
+========== Data dimension = 3 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 29.3402
+Avg. sky2: 39.212
+---------- Update ----------
+Files removed
+Avg. sky1: 29.059
+Avg. sky2: 30.7599
+========== Data dimension = 4 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 57.7076
+Avg. sky2: 78.2891
+---------- Update ----------
+Files removed
+Avg. sky1: 57.3675
+Avg. sky2: 63.7941
+========== Data dimension = 5 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 94.4532
+Avg. sky2: 106.0766
+---------- Update ----------
+Files removed
+Avg. sky1: 94.1877
+Avg. sky2: 91.0236
+========== Data dimension = 6 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 138.2879
+Avg. sky2: 115.7654
+---------- Update ----------
+Files removed
+Avg. sky1: 138.0507
+Avg. sky2: 103.9212
+========== Data dimension = 7 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 184.1694
+Avg. sky2: 96.88
+---------- Update ----------
+Files removed
+Avg. sky1: 184.0973
+Avg. sky2: 90.6109
+========== Data dimension = 8 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 217.1951
+Avg. sky2: 74.1202
+---------- Update ----------
+Files removed
+Avg. sky1: 217.19
+Avg. sky2: 72.0888
+========== Data dimension = 9 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 245.3477
+Avg. sky2: 49.3221
+---------- Update ----------
+Files removed
+Avg. sky1: 245.3477
+Avg. sky2: 48.6617
+========== Data dimension = 10 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 263.8199
+Avg. sky2: 31.5127
+---------- Update ----------
+Files removed
+Avg. sky1: 263.8045
+Avg. sky2: 31.3552

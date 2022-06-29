@@ -1,0 +1,162 @@
+=== Test how window size affect running time ===
+========== window size = 100 ==========
+---------- Brute force ----------
+Files removed
+--- 379.0309970378876 seconds ---
+---------- Update ----------
+Files removed
+--- 180.8739674091339 seconds ---
+========== window size = 200 ==========
+---------- Brute force ----------
+Files removed
+--- 1185.139724969864 seconds ---
+---------- Update ----------
+Files removed
+--- 542.294668674469 seconds ---
+========== window size = 300 ==========
+---------- Brute force ----------
+Files removed
+--- 2278.0986847877502 seconds ---
+---------- Update ----------
+Files removed
+--- 1065.5026230812073 seconds ---
+========== window size = 400 ==========
+---------- Brute force ----------
+Files removed
+--- 3653.584010362625 seconds ---
+---------- Update ----------
+Files removed
+--- 1742.5020503997803 seconds ---
+========== window size = 500 ==========
+---------- Brute force ----------
+Files removed
+--- 5285.141339540482 seconds ---
+---------- Update ----------
+Files removed
+--- 2504.6783912181854 seconds ---
+========== window size = 600 ==========
+---------- Brute force ----------
+Files removed
+--- 7158.943103551865 seconds ---
+---------- Update ----------
+Files removed
+--- 3422.0246045589447 seconds ---
+========== window size = 700 ==========
+---------- Brute force ----------
+Files removed
+--- 9275.952983140945 seconds ---
+---------- Update ----------
+Files removed
+--- 4479.996662139893 seconds ---
+========== window size = 800 ==========
+---------- Brute force ----------
+Files removed
+--- 11642.692545890808 seconds ---
+---------- Update ----------
+Files removed
+--- 5627.528877019882 seconds ---
+========== window size = 900 ==========
+---------- Brute force ----------
+Files removed
+--- 14368.577551841736 seconds ---
+---------- Update ----------
+Files removed
+--- 6994.942672967911 seconds ---
+========== window size = 1000 ==========
+---------- Brute force ----------
+Files removed
+--- 17144.151237010956 seconds ---
+---------- Update ----------
+Files removed
+--- 8478.717605829239 seconds ---
+=== Test how window size affect candidate skyline ===
+========== window size = 100 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 7.3686
+Avg. sky2: 8.6682
+---------- Update ----------
+Files removed
+Avg. sky1: 7.252
+Avg. sky2: 6.6976
+========== window size = 200 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 10.3443
+Avg. sky2: 11.7025
+---------- Update ----------
+Files removed
+Avg. sky1: 10.2388
+Avg. sky2: 9.3631
+========== window size = 300 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 12.9681
+Avg. sky2: 14.2019
+---------- Update ----------
+Files removed
+Avg. sky1: 12.8655
+Avg. sky2: 11.8994
+========== window size = 400 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 15.5599
+Avg. sky2: 16.8594
+---------- Update ----------
+Files removed
+Avg. sky1: 15.4264
+Avg. sky2: 14.3505
+========== window size = 500 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 17.7932
+Avg. sky2: 19.4244
+---------- Update ----------
+Files removed
+Avg. sky1: 17.6885
+Avg. sky2: 16.2298
+========== window size = 600 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 20.0157
+Avg. sky2: 21.6934
+---------- Update ----------
+Files removed
+Avg. sky1: 19.9439
+Avg. sky2: 18.2508
+========== window size = 700 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 22.199
+Avg. sky2: 23.669
+---------- Update ----------
+Files removed
+Avg. sky1: 22.1494
+Avg. sky2: 20.17
+========== window size = 800 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 24.3728
+Avg. sky2: 25.6703
+---------- Update ----------
+Files removed
+Avg. sky1: 24.3384
+Avg. sky2: 22.0338
+========== window size = 900 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 26.5615
+Avg. sky2: 27.5536
+---------- Update ----------
+Files removed
+Avg. sky1: 26.5599
+Avg. sky2: 24.3255
+========== window size = 1000 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 28.74
+Avg. sky2: 29.4227
+---------- Update ----------
+Files removed
+Avg. sky1: 28.709
+Avg. sky2: 26.5927

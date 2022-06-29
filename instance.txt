@@ -1,0 +1,130 @@
+=== Test how instance count affect running time ===
+========== instance count = 3 ==========
+---------- Brute force ----------
+Files removed
+--- 2232.025658607483 seconds ---
+---------- Update ----------
+Files removed
+--- 940.6206510066986 seconds ---
+========== instance count = 4 ==========
+---------- Brute force ----------
+Files removed
+--- 2219.4071521759033 seconds ---
+---------- Update ----------
+Files removed
+--- 1023.131094455719 seconds ---
+========== instance count = 5 ==========
+---------- Brute force ----------
+Files removed
+--- 2289.929646730423 seconds ---
+---------- Update ----------
+Files removed
+--- 1072.675318479538 seconds ---
+========== instance count = 6 ==========
+---------- Brute force ----------
+Files removed
+--- 2279.701903104782 seconds ---
+---------- Update ----------
+Files removed
+--- 1047.163982629776 seconds ---
+========== instance count = 7 ==========
+---------- Brute force ----------
+Files removed
+--- 2252.0988495349884 seconds ---
+---------- Update ----------
+Files removed
+--- 1054.540827512741 seconds ---
+========== instance count = 8 ==========
+---------- Brute force ----------
+Files removed
+--- 2292.8017156124115 seconds ---
+---------- Update ----------
+Files removed
+--- 1075.4158267974854 seconds ---
+========== instance count = 9 ==========
+---------- Brute force ----------
+Files removed
+--- 2276.2723281383514 seconds ---
+---------- Update ----------
+Files removed
+--- 1119.6518495082855 seconds ---
+========== instance count = 10 ==========
+---------- Brute force ----------
+Files removed
+--- 2341.6443240642548 seconds ---
+---------- Update ----------
+Files removed
+--- 1143.9292492866516 seconds ---
+=== Test how instance count affect candidate skyline ===
+========== instance count = 3 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 11.9776
+Avg. sky2: 14.5051
+---------- Update ----------
+Files removed
+Avg. sky1: 11.7814
+Avg. sky2: 11.5772
+========== instance count = 4 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 13.0388
+Avg. sky2: 15.1966
+---------- Update ----------
+Files removed
+Avg. sky1: 12.9541
+Avg. sky2: 12.1202
+========== instance count = 5 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 12.9681
+Avg. sky2: 14.2019
+---------- Update ----------
+Files removed
+Avg. sky1: 12.8655
+Avg. sky2: 11.8994
+========== instance count = 6 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 12.2009
+Avg. sky2: 14.3142
+---------- Update ----------
+Files removed
+Avg. sky1: 12.1664
+Avg. sky2: 11.6588
+========== instance count = 7 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 12.85
+Avg. sky2: 14.0171
+---------- Update ----------
+Files removed
+Avg. sky1: 12.7199
+Avg. sky2: 11.178
+========== instance count = 8 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 13.2452
+Avg. sky2: 14.0563
+---------- Update ----------
+Files removed
+Avg. sky1: 13.1052
+Avg. sky2: 11.1659
+========== instance count = 9 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 13.2324
+Avg. sky2: 14.6201
+---------- Update ----------
+Files removed
+Avg. sky1: 13.1094
+Avg. sky2: 11.6952
+========== instance count = 10 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 12.8099
+Avg. sky2: 14.8464
+---------- Update ----------
+Files removed
+Avg. sky1: 12.6734
+Avg. sky2: 11.9153

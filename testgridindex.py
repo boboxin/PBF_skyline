@@ -39,10 +39,13 @@ if __name__ == '__main__':
     inputlist = indata[0]
     inputarray = indata[1]
     print(inputarray)
+    print("type of indata=",type(inputarray))
+    print("dimention of the indata=",inputarray.ndim)
     test = Grid(inputarray,2)
     print("size=" ,test.size)
     print("grid dim=",test.dim)
     print("id=",test.cell_id(inputarray))
+    
     for i in range(30):
         # print("indata[",i,"]=",inputlist[i])
         # print("cindata[",i,"]=",cindata[i])
