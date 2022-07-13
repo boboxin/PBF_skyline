@@ -35,22 +35,21 @@ if __name__ == '__main__':
     # print("id:",id)
     # print("width:",width)
     # print("--------------")
-    indata = batchImport('30_dim5_pos1_rad1_01000.csv',1)
+    indata = batchImport('30_dim2_pos5_rad5_01000.csv',5)
     inputlist = indata[0]
     inputarray = indata[1]
     print(inputarray)
-    print("type of indata=",type(inputarray))
-    print("dimention of the indata=",inputarray.ndim)
+    print("type of indata[1]=",type(inputarray))
+    print("dimention of the indata[1]=",inputarray.ndim)
     test = Grid(inputarray,2)
-    print("size=" ,test.size)
+    print("grid size=" ,test.size)
     print("grid dim=",test.dim)
-    print("id=",test.cell_id(inputarray))
+    print("grid id=",test.cell_id(inputarray))
+    print("-----------")
     
     for i in range(30):
-        # print("indata[",i,"]=",inputlist[i])
-        # print("cindata[",i,"]=",cindata[i])
         
         # local = indata.getLocation(i)
-        minmaxtuple = inputlist[i].getMinMaxTuple()
-        print("tpl is :",minmaxtuple)
+        # minmaxtuple = inputlist[i].getMinMaxTuple()
+        print("inputlist is :",inputlist[i])
         # print("locations is :", local)
