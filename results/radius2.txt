@@ -1,0 +1,155 @@
+=== Test how data radius affect running time ===
+========== radius = 4 ==========
+
+---------- Brute force ----------
+Files removed
+--- 2183.5374681949615 seconds ---
+---------- Update ----------
+Files removed
+--- 950.2646656036377 seconds ---
+========== radius = 6 ==========
+
+---------- Brute force ----------
+Files removed
+--- 2351.9175293445587 seconds ---
+---------- Update ----------
+Files removed
+--- 1077.0428814888 seconds ---
+========== radius = 8 ==========
+
+---------- Brute force ----------
+Files removed
+--- 2415.617983818054 seconds ---
+---------- Update ----------
+Files removed
+--- 1238.3155686855316 seconds ---
+========== radius = 10 ==========
+
+---------- Brute force ----------
+Files removed
+--- 2662.554936170578 seconds ---
+---------- Update ----------
+Files removed
+--- 1316.0942285060883 seconds ---
+========== radius = 12 ==========
+
+---------- Brute force ----------
+Files removed
+--- 2773.761069059372 seconds ---
+---------- Update ----------
+Files removed
+--- 1614.5190086364746 seconds ---
+========== radius = 14 ==========
+
+---------- Brute force ----------
+Files removed
+--- 2842.3774197101593 seconds ---
+---------- Update ----------
+Files removed
+--- 1622.9972033500671 seconds ---
+========== radius = 16 ==========
+
+---------- Brute force ----------
+Files removed
+--- 2921.547872066498 seconds ---
+---------- Update ----------
+Files removed
+--- 1896.3893265724182 seconds ---
+========== radius = 18 ==========
+
+---------- Brute force ----------
+Files removed
+--- 3011.0989871025085 seconds ---
+---------- Update ----------
+Files removed
+--- 1980.1440708637238 seconds ---
+========== radius = 20 ==========
+
+---------- Brute force ----------
+Files removed
+--- 3152.0505340099335 seconds ---
+---------- Update ----------
+Files removed
+--- 2091.853759288788 seconds ---
+=== Test how data radius affect candidate skyline ===
+========== radius = 4 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 11.0132
+Avg. sky2: 13.5633
+---------- Update ----------
+Files removed
+Avg. sky1: 10.8806
+Avg. sky2: 10.6575
+========== radius = 6 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 13.0182
+Avg. sky2: 15.2232
+---------- Update ----------
+Files removed
+Avg. sky1: 12.9475
+Avg. sky2: 12.3173
+========== radius = 8 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 15.7489
+Avg. sky2: 17.7156
+---------- Update ----------
+Files removed
+Avg. sky1: 15.7351
+Avg. sky2: 14.5549
+========== radius = 10 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 18.5132
+Avg. sky2: 19.7535
+---------- Update ----------
+Files removed
+Avg. sky1: 18.4406
+Avg. sky2: 15.6987
+========== radius = 12 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 21.5503
+Avg. sky2: 23.4885
+---------- Update ----------
+Files removed
+Avg. sky1: 21.5171
+Avg. sky2: 20.4433
+========== radius = 14 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 21.5437
+Avg. sky2: 23.7561
+---------- Update ----------
+Files removed
+Avg. sky1: 21.5176
+Avg. sky2: 20.5948
+========== radius = 16 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 26.8065
+Avg. sky2: 26.9944
+---------- Update ----------
+Files removed
+Avg. sky1: 26.8048
+Avg. sky2: 23.9807
+========== radius = 18 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 28.6412
+Avg. sky2: 29.3061
+---------- Update ----------
+Files removed
+Avg. sky1: 28.6299
+Avg. sky2: 25.6242
+========== radius = 20 ==========
+---------- Brute force ----------
+Files removed
+Avg. sky1: 29.5139
+Avg. sky2: 31.5502
+---------- Update ----------
+Files removed
+Avg. sky1: 29.5139
+Avg. sky2: 28.0191

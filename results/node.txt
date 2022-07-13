@@ -1,0 +1,9 @@
+number of edge :1; cost time 40.462451457977295 
+number of edge :2; cost time 71.97290229797363 
+number of edge :4; cost time 257.96410274505615 
+number of edge :6; cost time 440.9367620944977 
+number of edge :8; cost time 771.1826465129852 
+number of edge :10; cost time 1322.7081928253174 
+number of edge :12; cost time 1622.7156209945679 
+number of edge :14; cost time 2062.3427243232727 
+number of edge :16; cost time 2782.3330504894257
