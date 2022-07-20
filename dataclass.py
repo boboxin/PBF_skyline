@@ -139,7 +139,7 @@ def batchImport(csvfile, ps):
         instance count of an object
     """
     result = []
-    locallist = []
+    locatlist = []
     with open(here+'/'+csvfile, 'r') as f:
         csv_reader = csv.reader(f, delimiter=';')
         for row in csv_reader:
@@ -147,14 +147,14 @@ def batchImport(csvfile, ps):
             for p in range(ps):
                 # Some awful string manipulation to parse numbers
                 data.insertLocation(float(row[2*p+1]), [int(float(i)) for i in row[2*p+2].strip(' []').split(',')])
-                local = data.getLocation(p)
+                locat = data.getLocation(p)
                 # print(local)
-                locallist.append(local)
-                larray = np.array(locallist)
+                locatlist.append(locat)
+                larray = np.array(locatlist)# use array data type to return
                 # print(larray[p],type(larray),larray.shape)
                 
                 
-            result.append(data)
+            result.append(data) #all is in a list
     return result,larray
 
 
