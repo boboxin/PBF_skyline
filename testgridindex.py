@@ -37,7 +37,7 @@ if __name__ == '__main__':
     # print("--------------")
     indata = batchImport('30_dim2_pos5_rad5_01000.csv',5)
     inputlist = indata[0]
-    inputarray = indata[1]
+    inputarray = indata[1]#location for
     print(inputarray)
     print("type of indata[1]=",type(inputarray))
     print("dimention of the indata[1]=",inputarray.ndim)
