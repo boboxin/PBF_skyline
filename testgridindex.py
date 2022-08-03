@@ -10,6 +10,26 @@ import validators as vlds
 from gridclass import Grid 
 from dataclass import Data,batchImport
 
+
+def gravity(cgarray):
+    
+    tg=[0,0]
+    temp=0
+    gravitylist=[]
+    for k in range(30): #30 is the data count
+        for i in range(5): # 5 is the possible instance
+            tg=cgarray[temp+i]+tg
+
+        tg=tg/5 # 5 is the possible instance
+        gravitylist.append(tg)
+        tg=[0,0]
+        temp= temp +5 # 5 is the possible instance
+    garray = np.array(gravitylist)# use array data type to return
+                
+    for h in range(30): 
+        print(gravitylist[h])
+    return garray
+
 if __name__ == '__main__':
     # Npoints = 10
     # # Ncentres = 2
@@ -38,18 +58,18 @@ if __name__ == '__main__':
     indata = batchImport('30_dim2_pos5_rad5_01000.csv',5)
     inputlist = indata[0]
     inputarray = indata[1]#location for
-    print(inputarray)
-    print("type of indata[1]=",type(inputarray))
-    print("dimention of the indata[1]=",inputarray.ndim)
-    test = Grid(inputarray,2)
+    garray=gravity(inputarray)#
+    # print("dimention of the garray=",garray.ndim)
+    test = Grid(garray,3)#index
     print("grid size=" ,test.size)
     print("grid dim=",test.dim)
-    print("grid id=",test.cell_id(inputarray))
+    print("grid edge=",test.edges)
+    print("grid id=",test.cell_id(garray))
     print("-----------")
     
-    for i in range(30):
+    # for i in range(30):
         
-        # local = indata.getLocation(i)
-        # minmaxtuple = inputlist[i].getMinMaxTuple()
-        print("inputlist is :",inputlist[i])
-        # print("locations is :", local)
+    #     # local = indata.getLocation(i)
+    #     # minmaxtuple = inputlist[i].getMinMaxTuple()
+    #     print("inputlist is :",inputlist[i])
+    #     # print("locations is :", local)
