@@ -12,25 +12,25 @@
   * pruning的方法尚在研擬
 
 * Compared Methods:
-1. Edge-assisted Parallel Uncertain Skyline (EPUS).
-2. Parallel R-tree Pruning Only (PRPO).
-3. Parallel Grid-index Pruning Only (PRGO).
-4. Parallel Brute-Force (PBF).
+  1. Edge-assisted Parallel Uncertain Skyline (EPUS).
+  2. Parallel R-tree Pruning Only (PRPO).
+  3. Parallel Grid-index Pruning Only (PRGO).
+  4. Parallel Brute-Force (PBF).
 
-Performance metrixs:
-1. Average Latency (Computation Time).
-2. Average Transmission Cost.
-3. Average Sizes of ESK_{k,1} and ESK_{k,2}
+  - Performance metrixs:
+  1. Average Latency (Computation Time).
+  2. Average Transmission Cost.
+  3. Average Sizes of ESK_{k,1} and ESK_{k,2}
 
-Results From the System Architecture Perspective:
-1. Number of Edge Computing Nodes.
-2. Size of sliding window.
+  - Results From the System Architecture Perspective:
+  1. Number of Edge Computing Nodes.
+  2. Size of sliding window.
 
-Results From the System Architecture Perspective:
-1. Size of Data Set.
-2. Data Dimensionality.
-3. Number of Instances.
-4. Radius of data object.
+  - Results From the System Architecture Perspective:
+  1. Size of Data Set.
+  2. Data Dimensionality.
+  3. Number of Instances.
+  4. Radius of data object.
 
 ## 0727(暫停一次)文字提示：
 * edge實驗中 window size的比較(100,300,500,700)
