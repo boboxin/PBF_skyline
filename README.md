@@ -1,6 +1,16 @@
 # Gridskyline
 #### 期刊衝起來，程式肝起來
 
+## 0803開會重點：
+* edge端傳至server端的資料筆數
+  * 上傳有變化的部分
+* Esk1,Esk2是什麼
+  * communication load
+* R-tree的參考
+  * 找到就不用開發Grid-index
+* Grid-index 持續努力
+  * pruning的方法尚在研擬
+
 ## 0727(暫停一次)文字提示：
 * edge實驗中 window size的比較(100,300,500,700)
   * 結點數量不同的情況下，在edge的window-size以及server的window-size進行改變
