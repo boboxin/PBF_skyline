@@ -11,8 +11,9 @@
 * Grid-index 持續努力
   * pruning的方法尚在研擬
 
-* Compared Methods:
-  1. Edge-assisted Parallel Uncertain Skyline (EPUS).
+* 實驗規劃：
+  - 比較方法
+  1. 邊緣輔助平行不確定天際線（EPUS）。
   2. Parallel R-tree Pruning Only (PRPO).
   3. Parallel Grid-index Pruning Only (PRGO).
   4. Parallel Brute-Force (PBF).
