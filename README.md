@@ -1,6 +1,12 @@
 # Gridskyline
 #### 期刊衝起來，程式肝起來
 
+## 0810開會重點：
+* 碩論的實驗 -->server 端的sliding windows size需要為 edge端的大小乘上edge數量
+* edge實驗中 window size的比較(100,300,500,700)下有表。
+* 提示：在Brute force對照組中資料進入數量要一致
+* Brute force still need sliding windows
+
 ## 0803開會重點：
 * edge端傳至server端的資料筆數
   * 上傳有變化的部分
