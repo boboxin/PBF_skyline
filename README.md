@@ -4,10 +4,16 @@
 ## 0803開會重點：
 * edge端傳至server端的資料筆數
   * 上傳有變化的部分
+    * edge端會在每一個timestamp中上傳skyline的變化(sk1、sk2或是outdated data)
+    * server會執行與資料筆數相同的次數是因為在實驗環境的假設中，一筆資料就是一個timestamp
+    * /更正/server 端的sliding windows size需要為 edge端的大小乘上edge數量
 * Esk1,Esk2是什麼
   * communication load
+    * esk2為在slidingwindows中扣除esk1後所形成的skyline query
+    * PRPO所計算的esk2是利用slidingwindows全部的點去進行計算
 * R-tree的參考
   * 找到就不用開發Grid-index
+    * sky rtree 論文
 * Grid-index 持續努力
   * pruning的方法尚在研擬
 
