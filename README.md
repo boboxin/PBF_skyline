@@ -6,6 +6,7 @@
 * edge實驗中 window size的比較(100,300,500,700)下有表。
 * 提示：在Brute force對照組中資料進入數量要一致
 * Brute force still need sliding windows
+* 小規模試驗最終skyline結果
 
 ## 0803開會重點：
 * edge端傳至server端的資料筆數
