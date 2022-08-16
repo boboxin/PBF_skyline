@@ -110,20 +110,25 @@ class bfsky(PSky):
     
       
 
-def gravity(cgarray,ps):
+def gravity(cgarray,ps,dim):
+    tg=[]
+    for d in range(dim):
+        tg.append(0)
     
-    tg=[0,0]
+    
     temp=0
     gravitylist=[]
-    for k in range(30): #30 is the data count
-        for i in range(ps): # 5 is the possible instance
+    for k in range(100): #30 is the data count
+        for i in range(ps): # ps is the possible instance
             tg=cgarray[temp+i]+tg
 
-        tg=tg/ps # 5 is the possible instance
+        tg=tg/ps # ps is the possible instance
         ltg=tg.tolist()
         gravitylist.append(ltg)
-        tg=[0,0]
-        temp= temp +ps # 5 is the possible instance
+        tg=[]
+        for d in range(dim):
+            tg.append(0)
+        temp= temp +ps # ps is the possible instance
     # garray = np.array(gravitylist)# use array data type to return
                 
     # for h in range(30): 
@@ -132,15 +137,15 @@ def gravity(cgarray,ps):
 
 if __name__ == '__main__':
     
-    test = bfsky(2, 5, 5, [0,1000], wsize=5)
-    indata = batchImport('30_dim2_pos5_rad5_01000.csv',5)
+    test = bfsky(2, 5, 5, [0,1000], wsize=20)
+    indata = batchImport('100_dim2_pos5_rad5_01000.csv',test.ps)
     inputlist = indata[0]
     inputarray = indata[1]#location for
-    glist=gravity(inputarray,5)# turn uncertain data into certain data
+    glist=gravity(inputarray,test.ps,test.dim)# turn uncertain data into certain data
 
-    print("glist0 type",type(glist[0]))
+    # print("glist0 type",type(glist[0]))
     
-    for i in range(30):
+    for i in range(100):
         test.receiveData(glist[i])
         # print("garry is", glist[i][1])
         test.updateSkyline()
