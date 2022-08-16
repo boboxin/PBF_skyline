@@ -2,7 +2,7 @@
 import os, sys
 sys.path.append(os.path.abspath(os.pardir))
 
-from rtree import index
+# from rtree import index
 
 class PSky():
     def __init__(self, dim, ps, radius, drange, wsize):
@@ -30,29 +30,29 @@ class PSky():
         self.skyline = [] # 1st set skyline candidate
         self.skyline2 = [] # 2nd set skyline candidate
         self.outdated = [] # temporary storage for outdated data
-        p = index.Property()
-        p.dimension = dim
-        p.dat_extension = 'data'
-        p.idx_extension = 'index'
-        self.index = index.Index(str(dim)+'d_index',properties=p) # r-tree index
-    def updateIndex(self, d, op):
-        """
-        Update R-Tree index
+        # p = index.Property()
+        # p.dimension = dim
+        # p.dat_extension = 'data'
+        # p.idx_extension = 'index'
+        # self.index = index.Index(str(dim)+'d_index',properties=p) # r-tree index
+    # def updateIndex(self, d, op):
+    #     """
+    #     Update R-Tree index
 
-        :param d: Data
-            The data to be insert/delete
-        :param op: str
-            'insert' indicate data insertion
-            'remove' indicate the removal of data
-        """
-        if op == 'insert':
-            id = int(d.getLabel()[2:])
-            self.index.insert(id, d.getMinMaxTuple(),obj=d)
-        elif op == 'remove':
-            id = int(d.getLabel()[2:])
-            self.index.delete(id,d.getMinMaxTuple())
-        else:
-            print("error")
+    #     :param d: Data
+    #         The data to be insert/delete
+    #     :param op: str
+    #         'insert' indicate data insertion
+    #         'remove' indicate the removal of data
+    #     """
+    #     if op == 'insert':
+    #         id = int(d.getLabel()[2:])
+    #         self.index.insert(id, d.getMinMaxTuple(),obj=d)
+    #     elif op == 'remove':
+    #         id = int(d.getLabel()[2:])
+    #         self.index.delete(id,d.getMinMaxTuple())
+    #     else:
+    #         print("error")
     def getWindow(self):
         return self.window
     def getSkyline(self):
@@ -70,17 +70,17 @@ class PSky():
         Get current outdated data
         """
         return self.outdated
-    def removeRtree(self):
-        """
-        Remove rtree data and index file
-        """
-        self.index.close()
-        try:
-            os.remove(str(self.dim)+'d_index.data')
-            os.remove(str(self.dim)+'d_index.index')
-            print('Files removed')
-        except:
-            print('No such files')
+    # def removeRtree(self):
+    #     """
+    #     Remove rtree data and index file
+    #     """
+    #     self.index.close()
+    #     try:
+    #         os.remove(str(self.dim)+'d_index.data')
+    #         os.remove(str(self.dim)+'d_index.index')
+    #         print('Files removed')
+    #     except:
+    #         print('No such files')
 
 if __name__ == '__main__':
     pass
