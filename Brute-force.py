@@ -1,14 +1,4 @@
-from cgi import test
-from ctypes import sizeof
-import itertools
-from turtle import width
-
-import math
-import attr
 import numpy as np
-import validators as vlds
-
-from gridclass import Grid 
 from dataclass import Data,batchImport
 from skyclass import PSky
 
@@ -42,7 +32,6 @@ class bfsky(PSky):
             # print("del data")
         self.window.append(d)
         # print(self.window)
-        
         
     def updateSkyline(self):
         pruned = self.window.copy() #for skyline 1
@@ -104,18 +93,16 @@ class bfsky(PSky):
         
         self.skyline = clean
         self.skyline2 = pruned
-        print("self.windows",self.window)
-        print("self.skyline is",self.skyline)
-        print("self.skyline2 is",self.skyline2)
+        # print("self.windows",self.window)
+        # print("self.skyline is",self.skyline)
+        # print("self.skyline2 is",self.skyline2)
     
-      
 
 def gravity(cgarray,ps,dim):
     tg=[]
     for d in range(dim):
         tg.append(0)
-    
-    
+        
     temp=0
     gravitylist=[]
     for k in range(100): #30 is the data count
@@ -129,10 +116,7 @@ def gravity(cgarray,ps,dim):
         for d in range(dim):
             tg.append(0)
         temp= temp +ps # ps is the possible instance
-    # garray = np.array(gravitylist)# use array data type to return
-                
-    # for h in range(30): 
-    #     print(gravitylist[h])
+        
     return gravitylist
 
 if __name__ == '__main__':
@@ -147,8 +131,8 @@ if __name__ == '__main__':
     
     for i in range(100):
         test.receiveData(glist[i])
-        # print("garry is", glist[i][1])
+        
         test.updateSkyline()
+        print("test.getWindow()",test.getWindow())
+        print("test.getSkyline()",test.getSkyline())
         
-        
-        # print("garry is", garray[i])
