@@ -17,8 +17,10 @@ from PBF import pbfsky, batchImport
 
 def radius_time():
     print('=== Test how data radius affect running time ===')
-    radius = [3, 4, 5, 6, 7, 8, 9, 10]
+    radius = [4, 6, 8, 10, 12, 14, 16, 18, 20]
     for r in radius:
+        path = 'pdfex_radius_result.txt'
+        f = open(path,'a+')
         dqueue = batchImport('10000_dim2_pos5_rad'+str(r)+'_01000.csv', 5)
         print('========== radius = '+ str(r) + ' ==========\n')
         print('---------- Brute force ----------')
@@ -27,21 +29,17 @@ def radius_time():
         for i in range(10000):
             tbsky.receiveData(dqueue[i])
             tbsky.updateSkyline()
-        # tbsky.removeRtree()
-        print("--- %s seconds ---" % (time.time() - start_time))
-        # print('---------- Update ----------')
-        # tusky = slideUPSky(2, 5, r, [0,1000], wsize=300)
-        # start_time = time.time()
-        # for i in range(10000):
-        #     tusky.receiveData(dqueue[i])
-        #     tusky.updateSkyline()
-        # tusky.removeRtree()
-        # print("--- %s seconds ---" % (time.time() - start_time))
-
+        rtime1= time.time() - start_time
+        print("--- %s seconds ---" % (rtime1))
+        f.write('========== Data radius = {a} ==========' . format(a=tbsky.radius
+        f.write('radius:{a} ; time:{b} '.format(a=tbsky.radius,b= rtime1))
+        
 def radius_avgsk():
     print('=== Test how data radius affect candidate skyline ===')
-    radius = [3, 4, 5, 6, 7, 8, 9, 10]
+    radius = [4, 6, 8, 10, 12, 14, 16, 18, 20]
     for r in radius:
+        path = 'pdfex_radius_result.txt'
+        f = open(path,'a+')
         dqueue = batchImport('10000_dim2_pos5_rad'+str(r)+'_01000.csv', 5)
         print('========== radius = '+ str(r) + ' ==========')
         print('---------- Brute force ----------')
@@ -56,18 +54,9 @@ def radius_avgsk():
         avgsk1, avgsk2 = avgsk1/10000, avgsk2/10000
         print('Avg. sky1: '+ str(avgsk1))
         print('Avg. sky2: '+ str(avgsk2))
-        # print('---------- Update ----------')
-        # tusky = slideUPSky(2, 5, r, [0,1000], wsize=300)
-        # avgsk1, avgsk2 = 0, 0
-        # for i in range(10000):
-        #     tusky.receiveData(dqueue[i])
-        #     tusky.updateSkyline()
-        #     avgsk1 += len(tusky.getSkyline())
-        #     avgsk2 += len(tusky.getSkyline2())
-        # tusky.removeRtree()
-        # avgsk1, avgsk2 = avgsk1/10000, avgsk2/10000
-        # print('Avg. sky1: '+ str(avgsk1))
-        # print('Avg. sky2: '+ str(avgsk2))
+        f.write('========== Data radius = {a} ==========' . format(a=tbsky.radius
+        f.write('Avg. sky1:{a} ; Avg. sky2:{b} '.format(a=avgsk1,b= avgsk2))
+        
 
 if __name__ == '__main__':
     print("1: Test time\n2: Test average skyline size \n3: Run all test")
