@@ -1,13 +1,17 @@
 # Gridskyline
 #### 期刊衝起來，程式肝起來
 
+## 0817開會重點：
+* 進行PPT進度報告
+
+--------
 ## 0810開會重點：
 * 碩論的實驗 -->server 端的sliding windows size需要為 edge端的大小乘上edge數量
 * edge實驗中 window size的比較(100,300,500,700)下有表。
 * 提示：在Brute force對照組中資料進入數量要一致
 * Brute force still need sliding windows
 * 小規模試驗最終skyline結果
-
+-------
 ## 0803開會重點：
 * edge端傳至server端的資料筆數
   * 上傳有變化的部分
@@ -45,7 +49,7 @@
   2. Data Dimensionality.
   3. Number of Instances.
   4. Radius of data object.
-
+-----
 ## 0727(暫停一次)文字提示：
 * edge實驗中 window size的比較(100,300,500,700)
   * 結點數量不同的情況下，在edge的window-size以及server的window-size進行改變
