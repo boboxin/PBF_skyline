@@ -31,7 +31,7 @@ def radius_time():
             tbsky.updateSkyline()
         rtime1= time.time() - start_time
         print("--- %s seconds ---" % (rtime1))
-        f.write('========== Data radius = {a} ==========' . format(a=tbsky.radius
+        f.write('========== Data radius = {a} ==========' . format(a=tbsky.radius))
         f.write('radius:{a} ; time:{b} '.format(a=tbsky.radius,b= rtime1))
         
 def radius_avgsk():
@@ -54,7 +54,7 @@ def radius_avgsk():
         avgsk1, avgsk2 = avgsk1/10000, avgsk2/10000
         print('Avg. sky1: '+ str(avgsk1))
         print('Avg. sky2: '+ str(avgsk2))
-        f.write('========== Data radius = {a} ==========' . format(a=tbsky.radius
+        f.write('========== Data radius = {a} ==========' . format(a=tbsky.radius))
         f.write('Avg. sky1:{a} ; Avg. sky2:{b} '.format(a=avgsk1,b= avgsk2))
         
 

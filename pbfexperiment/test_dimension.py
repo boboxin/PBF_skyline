@@ -29,7 +29,7 @@ def dim_time():
             tbsky.updateSkyline()
         dtime1 = time.time() - start_time
         print("--- %s seconds ---" % (dtime1))
-        f.write('========== Data dimension = {a} ==========' . format(a=tbsky.dim)
+        f.write('========== Data dimension = {a} ==========' . format(a=tbsky.dim))
         f.write('dimension:{a} ; time:{b} '.format(a=tbsky.dim,b= dtime1))
         
 def dim_avgsk():
@@ -52,7 +52,7 @@ def dim_avgsk():
         avgsk1, avgsk2 = avgsk1/10000, avgsk2/10000
         print('Avg. sky1: '+ str(avgsk1))
         print('Avg. sky2: '+ str(avgsk2))
-        f.write('========== Data dimension = {a} ==========' . format(a=tbsky.dim)
+        f.write('========== Data dimension = {a} ==========' . format(a=tbsky.dim))
         f.write('Avg. sky1:{a} ; Avg. sky2:{b} '.format(a=avgsk1,b= avgsk2))
         
 if __name__ == '__main__':

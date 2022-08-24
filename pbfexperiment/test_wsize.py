@@ -29,7 +29,7 @@ def wsize_time():
             tbsky.updateSkyline()
         wtime1 = time.time() - start_time
         print("--- %s seconds ---" % (wtime1))
-        f.write('========== Data window_size = {a} ==========' . format(a=tbsky.wsize)
+        f.write('========== Data window_size = {a} ==========' . format(a=tbsky.wsize))
         f.write('win size:{a} ; time:{b} '.format(a=tbsky.wsize,b= wtime1))
         
 
@@ -51,7 +51,7 @@ def wsize_avgsk():
         avgsk1, avgsk2 = avgsk1/10000, avgsk2/10000
         print('Avg. sky1: '+ str(avgsk1))
         print('Avg. sky2: '+ str(avgsk2))
-        f.write('========== Data win size = {a} ==========' . format(a=tbsky.wsize)
+        f.write('========== Data win size = {a} ==========' . format(a=tbsky.wsize))
         f.write('Avg. sky1:{a} ; Avg. sky2:{b} '.format(a=avgsk1,b= avgsk2))
         
 if __name__ == '__main__':
