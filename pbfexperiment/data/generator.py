@@ -82,11 +82,20 @@ def csvgen(path, count, dim, pcount, rad, dmin, dmax):
 
 if __name__ == '__main__':
     here = os.path.dirname(os.path.abspath(__file__))
-    count = int(input('How many data is needed: '))
-    dim = int(input('How many dimension of data: '))
-    pcount = int(input('How many possible output of each data: '))
-    rad = int(input('Radius of the record: '))
-    dmin = int(input('Data range min: '))
-    dmax = int(input('Data range max: '))
-    csvgen(here, count, dim, pcount, rad, dmin, dmax)
-    print("Done")
+    # count = int(input('How many data is needed: '))
+    # dim = int(input('How many dimension of data: '))
+    # pcount = int(input('How many possible output of each data: '))
+    # rad = int(input('Radius of the record: '))
+    # dmin = int(input('Data range min: '))
+    # dmax = int(input('Data range max: '))
+    count = int(10000)
+    dim = int(2)
+    # rad = int(5)
+    pcount = 5
+    dmin = int(0)
+    dmax = int(1000)
+    radius = [4, 6, 8, 10, 12, 14, 16, 18, 20]
+    for r in radius:
+        rad = int(r)
+        csvgen(here, count, dim, pcount, rad, dmin, dmax)
+        print("Done")

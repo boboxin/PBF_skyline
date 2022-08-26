@@ -7,8 +7,8 @@ sys.path.append(os.path.abspath(os.pardir))
 
 import time
 
-from .. import PBF
-from PBF import pbfsky, batchImport
+# from .. import PBF
+from PBF import pbfsky, batchImport,gravity
 
 
 def dim_time():
@@ -19,13 +19,18 @@ def dim_time():
         path = 'pdfex_dim_result.txt'
         f = open(path,'a+')
         dqueue = batchImport('10000_dim'+str(d)+'_pos5_rad5_01000.csv', 5)
+        inputlist = dqueue[0]
+        inputarray = dqueue[1]#location for
+        
         print('========== Data dimension = '+ str(d) + ' ==========')
         print('---------- Brute force ----------')
         tbsky = pbfsky(d, 5, 5, [0,1000], wsize=300)
+        glist=gravity(inputarray,tbsky.ps,tbsky.dim)# turn uncertain data into certain data
+        
         start_time = time.time()
 
         for i in range(10000):
-            tbsky.receiveData(dqueue[i])
+            tbsky.receiveData(glist[i])
             tbsky.updateSkyline()
         dtime1 = time.time() - start_time
         print("--- %s seconds ---" % (dtime1))
@@ -39,12 +44,17 @@ def dim_avgsk():
         path = 'pdfex_dim_result.txt'
         f = open(path,'a+')
         dqueue = batchImport('10000_dim'+str(d)+'_pos5_rad5_01000.csv', 5)
+        inputlist = dqueue[0]
+        inputarray = dqueue[1]#location for
+        
         print('========== Data dimension = '+ str(d) + ' ==========')
         print('---------- Brute force ----------')
         tbsky = pbfsky(d, 5, 5, [0,1000], wsize=300)
+        glist=gravity(inputarray,tbsky.ps,tbsky.dim)# turn uncertain data into certain data
+        
         avgsk1, avgsk2 = 0, 0
         for i in range(10000):
-            tbsky.receiveData(dqueue[i])
+            tbsky.receiveData(glist[i])
             tbsky.updateSkyline()
             avgsk1 += len(tbsky.getSkyline())
             avgsk2 += len(tbsky.getSkyline2())

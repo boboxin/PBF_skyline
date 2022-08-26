@@ -7,8 +7,8 @@ sys.path.append(os.path.abspath(os.pardir))
 
 import time
 
-from .. import PBF
-from PBF import pbfsky, batchImport
+# from .. import PBF
+from PBF import pbfsky, batchImport,gravity
 
 def instance_time():
     print('=== Test how instance count affect running time ===')
@@ -17,12 +17,17 @@ def instance_time():
         path = 'pdfex_inst_result.txt'
         f = open(path,'a+')
         dqueue = batchImport('10000_dim2_pos'+str(ins)+'_rad5_01000.csv', ins)
+        inputlist = dqueue[0]
+        inputarray = dqueue[1]#location for
+
         print('========== instance count = '+ str(ins) + ' ==========')
         print('---------- Brute force ----------')
         tbsky = pbfsky(2, ins, 5, [0,1000], wsize=300)
+        glist=gravity(inputarray,tbsky.ps,tbsky.dim)# turn uncertain data into certain data
+        
         start_time = time.time()
         for i in range(10000):
-            tbsky.receiveData(dqueue[i])
+            tbsky.receiveData(glist[i])
             tbsky.updateSkyline()
         itime1 = time.time()- start_time 
         print("--- %s seconds ---" % (itime1))
@@ -37,12 +42,17 @@ def instance_avgsk():
         path = 'pdfex_inst_result.txt'
         f = open(path,'a+')
         dqueue = batchImport('10000_dim2_pos'+str(ins)+'_rad5_01000.csv', ins)
+        inputlist = dqueue[0]
+        inputarray = dqueue[1]#location for
+        
         print('========== instance count = '+ str(ins) + ' ==========')
         print('---------- Brute force ----------')
         tbsky = pbfsky(2, ins, 5, [0,1000], wsize=300)
+        glist=gravity(inputarray,tbsky.ps,tbsky.dim)# turn uncertain data into certain data
+        
         avgsk1, avgsk2 = 0, 0
         for i in range(10000):
-            tbsky.receiveData(dqueue[i])
+            tbsky.receiveData(glist[i])
             tbsky.updateSkyline()
             avgsk1 += len(tbsky.getSkyline())
             avgsk2 += len(tbsky.getSkyline2())

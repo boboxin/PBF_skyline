@@ -22,12 +22,17 @@ def radius_time():
         path = 'pdfex_radius_result.txt'
         f = open(path,'a+')
         dqueue = batchImport('10000_dim2_pos5_rad'+str(r)+'_01000.csv', 5)
+        inputlist = dqueue[0]
+        inputarray = dqueue[1]#location for
+
         print('========== radius = '+ str(r) + ' ==========\n')
         print('---------- Brute force ----------')
         tbsky = pbfsky(2, 5, r, [0,1000], wsize=300)
+        glist=gravity(inputarray,tbsky.ps,tbsky.dim)# turn uncertain data into certain data
+        
         start_time = time.time()
         for i in range(10000):
-            tbsky.receiveData(dqueue[i])
+            tbsky.receiveData(glist[i])
             tbsky.updateSkyline()
         rtime1= time.time() - start_time
         print("--- %s seconds ---" % (rtime1))
@@ -41,12 +46,17 @@ def radius_avgsk():
         path = 'pdfex_radius_result.txt'
         f = open(path,'a+')
         dqueue = batchImport('10000_dim2_pos5_rad'+str(r)+'_01000.csv', 5)
+        inputlist = dqueue[0]
+        inputarray = dqueue[1]#location for
+        
         print('========== radius = '+ str(r) + ' ==========')
         print('---------- Brute force ----------')
         tbsky = pbfsky(2, 5, r, [0,1000], wsize=300)
+        glist=gravity(inputarray,tbsky.ps,tbsky.dim)# turn uncertain data into certain data
+        
         avgsk1, avgsk2 = 0, 0
         for i in range(10000):
-            tbsky.receiveData(dqueue[i])
+            tbsky.receiveData(glist[i])
             tbsky.updateSkyline()
             avgsk1 += len(tbsky.getSkyline())
             avgsk2 += len(tbsky.getSkyline2())

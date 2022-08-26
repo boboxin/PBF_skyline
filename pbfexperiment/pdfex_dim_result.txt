@@ -1,0 +1,1 @@
+========== Data dimension = 2 ==========dimension:2 ; time:28.232380390167236 ========== Data dimension = 3 ==========dimension:3 ; time:56.69665575027466 ========== Data dimension = 4 ==========dimension:4 ; time:112.38853478431702 

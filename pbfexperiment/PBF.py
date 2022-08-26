@@ -274,7 +274,7 @@ def gravity(cgarray,ps,dim):
         
     temp=0
     gravitylist=[]
-    for k in range(100): #30 is the data count
+    for k in range(10000): #30 is the data count
         for i in range(ps): # ps is the possible instance
             tg=cgarray[temp+i]+tg
 

@@ -17,6 +17,9 @@ def wsize_time():
     print("=== Test how window size affect running time ===")
     wsize = [100,200,300,400,500,600,700,800,900,1000]
     dqueue = batchImport('10000_dim2_pos5_rad5_01000.csv', 5)
+    inputlist = dqueue[0]
+    inputarray = dqueue[1]#location for
+    glist=gravity(inputarray,5,2)# turn uncertain data into certain data    
     for w in wsize:
         path = 'pdfex_win_result.txt'
         f = open(path,'a+')
@@ -25,7 +28,7 @@ def wsize_time():
         tbsky = pbfsky(2, 5, 5, [0,1000], wsize=w)
         start_time = time.time()
         for i in range(10000):
-            tbsky.receiveData(dqueue[i])
+            tbsky.receiveData(glist[i])
             tbsky.updateSkyline()
         wtime1 = time.time() - start_time
         print("--- %s seconds ---" % (wtime1))
@@ -37,13 +40,16 @@ def wsize_avgsk():
     print("=== Test how window size affect candidate skyline ===")
     wsize = [100,200,300,400,500,600,700,800,900,1000]
     dqueue = batchImport('10000_dim2_pos5_rad5_01000.csv', 5)
+    inputlist = dqueue[0]
+    inputarray = dqueue[1]#location for
+    glist=gravity(inputarray,5,2)# turn uncertain data into certain data    
     for w in wsize:
         print('========== window size = '+ str(w) + ' ==========')
         print('---------- Brute force ----------')
         tbsky = pbfsky(2, 5, 5, [0,1000], wsize=w)
         avgsk1, avgsk2 = 0, 0
         for i in range(10000):
-            tbsky.receiveData(dqueue[i])
+            tbsky.receiveData(glist[i])
             tbsky.updateSkyline()
             avgsk1 += len(tbsky.getSkyline())
             avgsk2 += len(tbsky.getSkyline2())
