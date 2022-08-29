@@ -1,1 +1,38 @@
-========== Data dimension = 2 ==========dimension:2 ; time:28.232380390167236 ========== Data dimension = 3 ==========dimension:3 ; time:56.69665575027466 ========== Data dimension = 4 ==========dimension:4 ; time:112.38853478431702 
+========== Data dimension = 2 ==========
+dimension:2 ; time:28.232380390167236 
+========== Data dimension = 3 ==========
+dimension:3 ; time:56.69665575027466 
+========== Data dimension = 4 ==========
+dimension:4 ; time:112.38853478431702 
+========== Data dimension = 5 ==========
+dimension:5 ; time:183.50469589233398 
+========== Data dimension = 6 ==========
+dimension:6 ; time:273.35971450805664 
+========== Data dimension = 7 ==========
+dimension:7 ; time:368.9625105857849 
+========== Data dimension = 8 ==========
+dimension:8 ; time:454.52867221832275 
+========== Data dimension = 9 ==========
+dimension:9 ; time:517.3456053733826 
+========== Data dimension = 10 ==========
+dimension:10 ; time:570.4078602790833 
+
+
+========== Data dimension = 2 ==========
+Avg. sky1:12.7943 ; Avg. sky2:282.7207 
+========== Data dimension = 3 ==========
+Avg. sky1:28.94 ; Avg. sky2:266.575 
+========== Data dimension = 4 ==========
+Avg. sky1:58.7496 ; Avg. sky2:236.7654 
+========== Data dimension = 5 ==========
+Avg. sky1:91.5051 ; Avg. sky2:204.0099 
+========== Data dimension = 6 ==========
+Avg. sky1:133.8068 ; Avg. sky2:161.7082 
+========== Data dimension = 7 ==========
+Avg. sky1:177.144 ; Avg. sky2:118.371 
+========== Data dimension = 8 ==========
+Avg. sky1:218.8147 ; Avg. sky2:76.7003 
+========== Data dimension = 9 ==========
+Avg. sky1:243.4715 ; Avg. sky2:52.0435 
+========== Data dimension = 10 ==========
+Avg. sky1:264.0575 ; Avg. sky2:31.4575 

@@ -1,0 +1,64 @@
+========== Data window_size = 100 ==========
+win size:100 ; time:5.7857208251953125
+========== Data window_size = 200 ==========
+win size:200 ; time:15.200032472610474
+========== Data window_size = 300 ==========
+win size:300 ; time:27.920074462890625
+========== Data window_size = 400 ==========
+win size:400 ; time:43.820167541503906
+========== Data window_size = 500 ==========
+win size:500 ; time:62.716628074645996
+========== Data window_size = 600 ==========
+win size:600 ; time:84.10075092315674
+========== Data window_size = 700 ==========
+win size:700 ; time:108.05683517456055
+========== Data window_size = 800 ==========
+win size:800 ; time:134.72286748886108
+========== Data window_size = 900 ==========
+win size:900 ; time:163.44909477233887
+========== Data window_size = 1000 ==========
+win size:1000 ; time:195.37039875984192
+
+
+---------------------------------------------
+
+========== Data window_size = 100 ==========
+win size:100 ; time:5.720936298370361
+========== Data window_size = 200 ==========
+win size:200 ; time:15.004255294799805
+========== Data window_size = 300 ==========
+win size:300 ; time:27.57726240158081
+========== Data window_size = 400 ==========
+win size:400 ; time:43.213539123535156
+========== Data window_size = 500 ==========
+win size:500 ; time:61.674145460128784
+========== Data window_size = 600 ==========
+win size:600 ; time:83.0026707649231
+========== Data window_size = 700 ==========
+win size:700 ; time:106.62000775337219
+========== Data window_size = 800 ==========
+win size:800 ; time:132.84258675575256
+========== Data window_size = 900 ==========
+win size:900 ; time:161.6102831363678
+========== Data window_size = 1000 ==========
+win size:1000 ; time:192.65401482582092
+========== Data win size = 100 ==========
+Avg. sky1:7.4242 ; Avg. sky2:92.0808
+========== Data win size = 200 ==========
+Avg. sky1:10.1882 ; Avg. sky2:187.8218
+========== Data win size = 300 ==========
+Avg. sky1:12.7943 ; Avg. sky2:282.7207
+========== Data win size = 400 ==========
+Avg. sky1:15.1757 ; Avg. sky2:376.8443
+========== Data win size = 500 ==========
+Avg. sky1:17.4503 ; Avg. sky2:470.0747
+========== Data win size = 600 ==========
+Avg. sky1:19.5753 ; Avg. sky2:562.4547
+========== Data win size = 700 ==========
+Avg. sky1:21.5001 ; Avg. sky2:654.0349
+========== Data win size = 800 ==========
+Avg. sky1:23.398 ; Avg. sky2:744.642
+========== Data win size = 900 ==========
+Avg. sky1:25.2292 ; Avg. sky2:834.3158
+========== Data win size = 1000 ==========
+Avg. sky1:26.9726 ; Avg. sky2:923.0774

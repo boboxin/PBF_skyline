@@ -31,8 +31,8 @@ def instance_time():
             tbsky.updateSkyline()
         itime1 = time.time()- start_time 
         print("--- %s seconds ---" % (itime1))
-        f.write('========== Data instance = {a} ==========' . format(a=tbsky.ps)
-        f.write('instance:{a} ; time:{b} '.format(a=tbsky.ps,b= itime1))
+        f.write('========== Data instance = {a} ==========\n' . format(a=tbsky.ps))
+        f.write('instance:{a} ; time:{b}\n'.format(a=tbsky.ps,b= itime1))
 
 
 def instance_avgsk():
@@ -60,8 +60,8 @@ def instance_avgsk():
         avgsk1, avgsk2 = avgsk1/10000, avgsk2/10000
         print('Avg. sky1: '+ str(avgsk1))
         print('Avg. sky2: '+ str(avgsk2))
-        f.write('========== Data instance = {a} ==========' . format(a=tbsky.ps))
-        f.write('Avg. sky1:{a} ; Avg. sky2:{b} '.format(a=avgsk1,b= avgsk2))
+        f.write('========== Data instance = {a} ==========\n' . format(a=tbsky.ps))
+        f.write('Avg. sky1:{a} ; Avg. sky2:{b}\n'.format(a=avgsk1,b= avgsk2))
         
 
 if __name__ == '__main__':

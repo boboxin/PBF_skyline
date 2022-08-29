@@ -10,8 +10,8 @@ import time
 # from skyline.slideBPSky import slideBPSky
 # from skyline.slideUPSky import slideUPSky
 
-from .. import PBF
-from PBF import pbfsky, batchImport
+# from .. import PBF
+from PBF import pbfsky, batchImport,gravity
 
 def wsize_time():
     print("=== Test how window size affect running time ===")
@@ -32,8 +32,8 @@ def wsize_time():
             tbsky.updateSkyline()
         wtime1 = time.time() - start_time
         print("--- %s seconds ---" % (wtime1))
-        f.write('========== Data window_size = {a} ==========' . format(a=tbsky.wsize))
-        f.write('win size:{a} ; time:{b} '.format(a=tbsky.wsize,b= wtime1))
+        f.write('========== Data window_size = {a} ==========\n' . format(a=tbsky.wsize))
+        f.write('win size:{a} ; time:{b}\n'.format(a=tbsky.wsize,b= wtime1))
         
 
 def wsize_avgsk():
@@ -48,6 +48,8 @@ def wsize_avgsk():
         print('---------- Brute force ----------')
         tbsky = pbfsky(2, 5, 5, [0,1000], wsize=w)
         avgsk1, avgsk2 = 0, 0
+        path = 'pdfex_win_result.txt'
+        f = open(path,'a+')
         for i in range(10000):
             tbsky.receiveData(glist[i])
             tbsky.updateSkyline()
@@ -57,8 +59,8 @@ def wsize_avgsk():
         avgsk1, avgsk2 = avgsk1/10000, avgsk2/10000
         print('Avg. sky1: '+ str(avgsk1))
         print('Avg. sky2: '+ str(avgsk2))
-        f.write('========== Data win size = {a} ==========' . format(a=tbsky.wsize))
-        f.write('Avg. sky1:{a} ; Avg. sky2:{b} '.format(a=avgsk1,b= avgsk2))
+        f.write('========== Data win size = {a} ==========\n' . format(a=tbsky.wsize))
+        f.write('Avg. sky1:{a} ; Avg. sky2:{b}\n'.format(a=avgsk1,b= avgsk2))
         
 if __name__ == '__main__':
     print("1: Test time\n2: Test average skyline size \n3: Run all test")
