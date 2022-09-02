@@ -147,9 +147,9 @@ def batchImport(csvfile, ps):
             for p in range(ps):
                 # Some awful string manipulation to parse numbers
                 data.insertLocation(float(row[2*p+1]), [int(float(i)) for i in row[2*p+2].strip(' []').split(',')])
-                locat = data.getLocation(p)
+                locat = data.getLocation(p) # my add
                 # print(local)
-                locatlist.append(locat)
+                locatlist.append(locat) # my add
                 larray = np.array(locatlist)# use array data type to return
                 # print(larray[p],type(larray),larray.shape)
                 

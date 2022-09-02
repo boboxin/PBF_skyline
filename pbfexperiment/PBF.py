@@ -1,12 +1,13 @@
+from itertools import count
 import os
 import csv
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 
 here = os.path.dirname(os.path.abspath(__file__))
 class PSky():
-    def __init__(self, dim, ps, radius, drange, wsize):
+    def __init__(self, count ,dim, ps, radius, drange, wsize):
         """
         Initializer
 
@@ -22,6 +23,7 @@ class PSky():
         :param wsize: int
             Size of sliding window.
         """
+        self.count = count
         self.dim = dim # data dimension
         self.ps = ps # possible instance count
         self.radius = radius # radius of a data
@@ -176,10 +178,11 @@ class Data():
         return hash(str(self.__dict__))
 
 class pbfsky(PSky):
-    def __init__(self, dim, ps, radius, drange=[0,1000], wsize=300):
+    def __init__(self, count,dim, ps, radius, drange=[0,1000], wsize=300):
         """
         Initializer
-
+        :param count: int
+            The number of data
         :param dim: int
             The dimension of data
         :param ps: int
@@ -192,7 +195,7 @@ class pbfsky(PSky):
         :param wsize: int
             Size of sliding window.
         """
-        PSky.__init__(self, dim, ps, radius, drange, wsize)
+        PSky.__init__(self,count, dim, ps, radius, drange, wsize)
     def receiveData(self, d):
         """
         Receive one new data.
@@ -204,69 +207,102 @@ class pbfsky(PSky):
             del self.window[0]
             # print("del data")
         self.window.append(d)
-        # print(self.window)
+        # print("self.window[:]",self.window[:])
+        
+        # if len(self.window) >= 2:
+        #     # print("self.window",self.window)
+        #     print("self.window[:]",self.window[:])
+        #     print("self.window[0][1]",self.window[0][1])
         
     def updateSkyline(self):
-        pruned = self.window.copy() #for skyline 1
-        # print("pruned is",pruned)
+        pruned = self.window.copy() #for skyline 2
+        # print("pruned[-1][0] is",pruned[-1][0])
+        # print("pruned[-1][1] is",pruned[-1][1])
         
-        clean = self.window.copy() #for skyline 2
+        clean = self.window.copy() #for skyline 1
         
+        # print("clean[0] is",clean[-1][0])
         # print("clean is",clean)
         # pruning
+        # '''
+        
+        tag =test.dim
         for d in self.window.copy():
             # Find the interval between income data and max range region
-            if d in clean:    
+            # use min and max to compare
+            # if d in clean:    
                 
-                pastart = [self.drange[1] if i+2*self.radius+0.1>self.drange[1] 
-                           else i+2*self.radius+0.1 for i in d]
+                # pastart = [self.drange[1] if i+2*self.radius+0.1>self.drange[1] 
+                #            else i+2*self.radius+0.1 for i in d]
                 # print("in up-clean-pastart",pastart)
-                pamax = [self.drange[1] for j in range(self.dim)]
+                # pamax = [self.drange[1] for j in range(self.dim)]
                 # print("in up-clean-pamax",pamax)
-                                
-                for p in clean.copy():
-                    tag =0
-                    for l in range(len(p)):
-                        if p[l] > pastart[l] : #每一個維度都去進行比較全部都比較大才可以刪掉
-                            # print("pl is", p[l])
-                            # print("pstartl",pastart[l])
-                            tag=tag+1
-                        else:
-                            continue
-                    if tag == len(p):
-                        clean.remove(p)
+            
+            for p in clean.copy():
+                for l in range(test.dim): #p[0,1,2,.....]
+                    if self.window[-1][l] > p[l+test.dim] : 
+                        # print("pl is", p[l])
+                        # print("self.window[-1][l]",self.window[-1])
+                        tag=tag+1
+                        # print("tag is",tag)
                     else:
                         continue
+                
+            if tag == test.dim*test.wsize: #every dim and every point==>tag need to be equal to dim*window_size
+                # clean.remove(self.window[-1])
+                
+                # print("tag is",tag)
+                print("self.window[-1]",self.window[-1])
+                print("before pop clean is",clean)
+                clean.pop(-1)
+                print("after pop clean is",clean)
+                print("after pop window is",self.window)
+                # print("remove data")
+            else:
+                # print("@@")
+                continue
+                    
         
         for d in clean:
             pruned.remove(d)
-        
-        for d in pruned.copy():
-            if d in pruned:
-                pastart = [self.drange[1] if i+2*self.radius+0.1>self.drange[1] 
-                           else i+2*self.radius+0.1 for i in d]
-                pamax = [self.drange[1] for j in range(self.dim)]
-                # prune data points that are obviously dominated by current data point
+            
+       
+        # for d in pruned.copy():
+        #     if d in pruned:
+        #         pastart = [self.drange[1] if i+2*self.radius+0.1>self.drange[1] 
+        #                    else i+2*self.radius+0.1 for i in d]
+        #         pamax = [self.drange[1] for j in range(self.dim)]
+        #         # prune data points that are obviously dominated by current data point
 
-                for p in clean.copy():
-                    tag2 =0
-                    for l in range(len(p)):
-                        if p[l] > pastart[l] : #每一個維度都去進行比較全部都比較大才可以刪掉
-                            # print("pl is", p[l])
-                            # print("pstartl",pastart[l])
-                            tag2=tag2+1
-                        else:
-                            continue
-                    if tag2 == len(p):
-                        clean.remove(p)
-                    else:
-                        continue
-        
-        
+        #         for p in clean.copy():
+        #             tag2 =0
+        #             for l in range(len(p)):
+        #                 if p[l] > pastart[l] : #每一個維度都去進行比較全部都比較大才可以刪掉
+        #                     # print("pl is", p[l])
+        #                     # print("pstartl",pastart[l])
+        #                     tag2=tag2+1
+        #                 else:
+        #                     continue
+        #             if tag2 == len(p):
+        #                 clean.remove(p)
+        #             else:
+        #                 continue
         
         self.skyline = clean
-        self.skyline2 = pruned
-
+        # print("skyline is ", self.skyline)
+        # self.skyline2 = pruned
+        
+        
+    def showSkyline(self,ll,i):
+        #figure show
+        
+        plt.subplot(5,5, i-80 , aspect="equal")
+        plt.title(i-80)
+        for p in range(ll):
+            plt.scatter(self.skyline[p][0], self.skyline[p][1], c="r", marker=".", s=30)
+        plt.xlim(0,1000)
+        plt.ylim(0,1000)
+        
 def gravity(cgarray,ps,dim):
     tg=[]
     for d in range(dim):
@@ -274,7 +310,7 @@ def gravity(cgarray,ps,dim):
         
     temp=0
     gravitylist=[]
-    for k in range(10000): #30 is the data count
+    for k in range(100): #100 is the data count
         for i in range(ps): # ps is the possible instance
             tg=cgarray[temp+i]+tg
 
@@ -300,6 +336,7 @@ def batchImport(csvfile, ps):
     """
     result = []
     locatlist = []
+    mm=[]
     with open(here+'/data/'+csvfile, 'r') as f:
         csv_reader = csv.reader(f, delimiter=';')
         for row in csv_reader:
@@ -307,30 +344,51 @@ def batchImport(csvfile, ps):
             for p in range(ps):
                 # Some awful string manipulation to parse numbers
                 data.insertLocation(float(row[2*p+1]), [int(float(i)) for i in row[2*p+2].strip(' []').split(',')])
-                locat = data.getLocation(p)
                 # print(local)
-                locatlist.append(locat)
+                
+                
+                locat = data.getLocation(p) # my add
+                locatlist.append(locat) # my add
                 larray = np.array(locatlist)# use array data type to return
                 # print(larray[p],type(larray),larray.shape)
-                
-                
+                 
+            getmm = data.getMinMaxTuple() 
+            mm.append(getmm)
             result.append(data) #all is in a list
-    return result,larray
+            
+    return result,mm
 
+
+    
 if __name__ == '__main__':
     
-    test = pbfsky(2, 5, 5, [0,1000], wsize=20)
+    test = pbfsky(100,2, 5, 5, [0,1000], wsize=100)
     indata = batchImport('100_dim2_pos5_rad5_01000.csv',test.ps)
     inputlist = indata[0]
-    inputarray = indata[1]#location for
-    glist=gravity(inputarray,test.ps,test.dim)# turn uncertain data into certain data
+    mmlist = indata[1]#location for
+    ### if you forgot what data in mmlist you can use below forloop
+    # for i in range(100):
+    #     for d in range(test.dim):
+    #         print(mmlist[i][d+test.dim])
+    #     print(mmlist[i])
 
-
+    ### glist is the result that turn uncertain data into certain data 
+    ### but it is not nessary anymore 
+    # glist=gravity(inputarray,test.ps,test.dim)
+    
+    # plt.figure(0,figsize=(20,20))
+    
     for i in range(100):
         
-        test.receiveData(glist[i])
+        test.receiveData(mmlist[i])
         test.updateSkyline()
-        
-        print("test.getWindow()",test.getWindow())
-        print("test.getSkyline()",test.getSkyline())
-        print("test.getSkyline2()",test.getSkyline2())        
+    #     if i > 80: #for plot part of result
+    #         ll= len(test.skyline)
+    #         test.showSkyline(ll,i)
+         
+    #     # print("test.getWindow()",test.getWindow())
+    #     # print("test.getSkyline()",test.getSkyline())
+    #     # print("test.getSkyline2()",test.getSkyline2())
+    
+    # plt.tight_layout()
+    # plt.show()
