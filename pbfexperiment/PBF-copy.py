@@ -30,6 +30,7 @@ class PSky():
         self.drange = drange # data range
         self.wsize = wsize # sliding window size
         self.window = [] # sliding window
+        self.locationwindow =[] # for pbf location
         self.skyline = [] # 1st set skyline candidate
         self.skyline2 = [] # 2nd set skyline candidate
         self.outdated = [] # temporary storage for outdated data
@@ -38,6 +39,8 @@ class PSky():
         # p.dat_extension = 'data'
         # p.idx_extension = 'index'
         # self.index = index.Index(str(dim)+'d_index',properties=p) # r-tree index
+    def getlocationWindow(self):
+        return self.locationwindow
     def getWindow(self):
         return self.window
     def getSkyline(self):
@@ -196,17 +199,27 @@ class pbfsky(PSky):
             Size of sliding window.
         """
         PSky.__init__(self,count, dim, ps, radius, drange, wsize)
-    def receiveData(self, d):
+    def receiveData(self, d,l):
         """
         Receive one new data.
 
         :param d: Data
             The received data
+        :param l: location
+            d is all information l is the location that for calculate dominate
         """
         if len(self.window) >= self.wsize:
+            print("------del window data-------")
+            print("del window",self.window[0])
             del self.window[0]
-            # print("del data")
+            # for p in range(test.ps):
+            print("del location",self.locationwindow[0])
+            del self.locationwindow[0]
+        print("------append window data-------")   
         self.window.append(d)
+        self.locationwindow.append(l)
+        print("d is",d)
+        print("l is",l)
         # print("self.window[:]",self.window[:])
         
         # if len(self.window) >= 2:
@@ -335,6 +348,7 @@ def batchImport(csvfile, ps):
         csv_reader = csv.reader(f, delimiter=';')
         for row in csv_reader:
             data = Data(row[0], ps)
+            llist =[]
             for p in range(ps):
                 # Some awful string manipulation to parse numbers
                 data.insertLocation(float(row[2*p+1]), [int(float(i)) for i in row[2*p+2].strip(' []').split(',')])
@@ -342,15 +356,16 @@ def batchImport(csvfile, ps):
                 
                 
                 locat = data.getLocation(p) # my add
-                locatlist.append(locat) # my add
-                larray = np.array(locatlist)# use array data type to return
+                llist.append(locat) # my add
+                
+                # larray = np.array(locatlist)# use array data type to return
                 # print(larray[p],type(larray),larray.shape)
-                 
+            locatlist.append(llist)
             getmm = data.getMinMaxTuple() 
             mm.append(getmm)
             result.append(data) #all is in a list
             
-    return result,mm
+    return result,locatlist
 
 
     
@@ -358,24 +373,34 @@ if __name__ == '__main__':
     
     test = pbfsky(100,2, 5, 5, [0,1000], wsize=10)
     indata = batchImport('100_dim2_pos5_rad5_01000.csv',test.ps)
-    inputlist = indata[0]
-    mmlist = indata[1]#location for
-    ### if you forgot what data in mmlist you can use below forloop
+    dqueue = indata[0] #turn inputlist to dqueue
+    locatlist = indata[1] #location for
+    # mmlist = indata[1] #if you want to use remerber to modify the batchimport
+    ### if you forgot what data in mmlist and locatlist you can use below forloop
     # for i in range(100):
-    #     for d in range(test.dim):
-    #         print(mmlist[i][d+test.dim])
-    #     print(mmlist[i])
-    indata[0].getlocation
+    #     for d in range(test.ps):
+    #         # print(mmlist[i][d+test.dim])
+    #         print("locatlist ",i,locatlist[i*test.ps+d])
+    #     print("dqueue",dqueue[i])
     ### glist is the result that turn uncertain data into certain data 
     ### but it is not nessary anymore 
     # glist=gravity(inputarray,test.ps,test.dim)
     
-    # plt.figure(0,figsize=(20,20))
+    ## locatlist is the list include location
+    # print("------------")
+    # for i in range(100):
+    #     for p in range(test.ps):
+    #         print("locatlist ",i,locatlist[i][p])
+    #         for dm in range(test.dim):
+    #             print("locatlist ",i,"dm",dm,locatlist[i][p][dm])
     
+    # print(locatlist)
+    # plt.figure(0,figsize=(20,20))
+    # exit()
     for i in range(100):
         
-        test.receiveData(mmlist[i])
-        test.updateSkyline()
+        test.receiveData(dqueue[i],locatlist[i])
+        # test.updateSkyline()
     #     if i > 80: #for plot part of result
     #         ll= len(test.skyline)
     #         test.showSkyline(ll,i)

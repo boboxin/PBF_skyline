@@ -7,7 +7,7 @@ from rtree import index
 
 from skyline.PSky import PSky
 from data.dataClass import Data, batchImport
-from visualize.visualize import visualize
+# from visualize.visualize import visualize
 
 class slideBPSky(PSky):
     def __init__(self, dim, ps, radius, drange=[0,1000], wsize=300):
