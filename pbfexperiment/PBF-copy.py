@@ -231,46 +231,23 @@ class pbfsky(PSky):
         pruned = self.window.copy() #for skyline 2
         # print("pruned[-1][0] is",pruned[-1][0])
         # print("pruned[-1][1] is",pruned[-1][1])
-        
+        pruned_location = self.locationwindow.copy()
+
         clean = self.window.copy() #for skyline 1
-        
+        clean_location = self.locationwindow.copy()
         # print("clean[0] is",clean[-1][0])
         # print("clean is",clean)
         # pruning
         # '''
         
         tag =test.dim
-        temp =0
-        for d in self.window.copy():
-            temp = temp+1
-            # Find the interval between income data and max range region
-            # use min and max to compare            
-            for p in clean.copy():
-                for l in range(test.dim): #p[0,1,2,.....]
-                    if self.window[-1][l] > p[l+test.dim] : 
-                        # print("pl is", p[l])
-                        # print("self.window[-1][l]",self.window[-1])
-                        tag=tag+1
-                        # print("tag is",tag)
-                    else:
-                        continue
-                
-            if tag == test.dim*test.wsize: 
-                #every dim and every point==>tag need to be equal to dim*window_size
-                # clean.remove(self.window[-1])
-                
-                # print("tag is",tag)
-                # print("self.window[-1]",self.window[-1])
-                # print("before pop clean is",clean)
-                clean.pop(-1)
-                # print("after pop clean is",clean)
-                # print("after pop window is",self.window)
-                # print("remove data")
-            else:
-                # print("@@")
-                continue
+        
+        for d in self.locationwindow.copy():
+            
                     
-        # print("temp is ", temp)
+
+
+                    
         for d in clean:
             pruned.remove(d)
         # print("prune is",pruned)
