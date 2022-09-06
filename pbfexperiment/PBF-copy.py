@@ -209,18 +209,20 @@ class pbfsky(PSky):
             d is all information l is the location that for calculate dominate
         """
         if len(self.window) >= self.wsize:
-            print("------del window data-------")
-            print("del window",self.window[0])
+            # print("------del window data-------")
+            # print("del window",self.window[0])
             del self.window[0]
             # for p in range(test.ps):
-            print("del location",self.locationwindow[0])
+            # print("del location",self.locationwindow[0])
             del self.locationwindow[0]
-        print("------append window data-------")   
+        # print("------append window data-------")   
         self.window.append(d)
         self.locationwindow.append(l)
-        print("d is",d)
-        print("l is",l)
-        # print("self.window[:]",self.window[:])
+        # print("d is",d)
+        # print("l is",l)
+        # print("------now window data-------")
+        # # print("window",self.window[0])
+        # print("location",self.locationwindow[:])
         
         # if len(self.window) >= 2:
         #     # print("self.window",self.window)
@@ -228,28 +230,93 @@ class pbfsky(PSky):
         #     print("self.window[0][1]",self.window[0][1])
         
     def updateSkyline(self):
-        pruned = self.window.copy() #for skyline 2
-        # print("pruned[-1][0] is",pruned[-1][0])
-        # print("pruned[-1][1] is",pruned[-1][1])
-        pruned_location = self.locationwindow.copy()
+        
 
-        clean = self.window.copy() #for skyline 1
-        clean_location = self.locationwindow.copy()
+        clean = [] #for skyline 1
+        clean_location = []
+        
+        pruned = [] #for skyline 2
+        pruned_location = []
+        
         # print("clean[0] is",clean[-1][0])
         # print("clean is",clean)
+        # print("clean_location is",clean_location)
         # pruning
         # '''
         
-        tag =test.dim
+        # tag = test.dim
+        deltemp=[]
+        print("len(self.locationwindow)",len(self.locationwindow))
+        for c1 in range(len(self.locationwindow)):
+            # print("c1",c1)
+            for c2 in range(0,len(self.locationwindow),1):
+                # print("c2",c2)
+                tag = 0
+                for op in range(test.ps):
+                    for np in range(test.ps):
+                        jumptag = 0
+                        for d in range(test.dim):
+                            if  self.locationwindow[c2][np][d] < self.locationwindow[c1][op][d]:
+                                tag=tag+1
+                                #wrong maybe is something is not compare 
+                                #如果是只被第一個點dominate的點就沒辦法被刪掉跟判斷到
+                                # print("self.locationwindow[c][op]",self.locationwindow[c][op])
+                                # print("self.locationwindow[-1][np]",self.locationwindow[c][np])
+                                # print("tag",tag)
+                                # continue
+                            else:
+                                # continue
+                                jumptag=jumptag+1
+                                # print("jumptag",jumptag)
+                                
+                                # print("--------------no-------------")
+                        # if jumptag ==test.dim:
+                        #     break
+                        # else:
+                        #     continue
+                    
+                    # if jumptag ==test.dim:
+                    #     break
+                    # else:
+                    #     continue
+                    
+                
+                if tag == test.ps*test.ps*test.dim:
+                    # print("del append and ps^2*dim=",test.ps*test.ps*test.dim)
+                    deltemp.append(c1)
+                    # break
+                # elif jumptag != 0:
+                #     continue
+                else:
+                    continue
+                    
+            # if len(self.locationwindow)!=1 & tag == (len(self.locationwindow)-1)*test.ps*test.ps*test.dim:
+            #     # break
+            #     skylinetemp.append(c1)
+            # elif len(self.locationwindow) ==1:
+            #      skylinetemp.append(c1)   
+            # else:
+            #     continue
         
-        for d in self.locationwindow.copy():
+        
+        # print("deltemp",deltemp)        
+        for dele in range(len(self.window)):
+            # print("dele is ",dele)
+            # print("self.window(dele)",self.window[dele])
+            # print("self.locationwindow(dele)",self.locationwindow[dele])
+            if dele not in deltemp:
+                clean.append(self.window[dele])
+                clean_location.append(self.locationwindow[dele])
             
-                    
-
-
-                    
-        for d in clean:
-            pruned.remove(d)
+            else:
+                # if it need to be del it will be the skyline2canditate so we could put those into prune
+                pruned.append(self.window[dele])
+                pruned_location.append(self.locationwindow[dele])
+                
+            # print("clean[dele]",clean[dele])
+            # print("clean_location[dele]",clean_location[dele])    
+        
+        
         # print("prune is",pruned)
         # for d in pruned.copy():
         #     if d in pruned:
@@ -373,18 +440,35 @@ if __name__ == '__main__':
     
     # print(locatlist)
     # plt.figure(0,figsize=(20,20))
+    
     # exit()
     for i in range(100):
         
         test.receiveData(dqueue[i],locatlist[i])
-        # test.updateSkyline()
+        test.updateSkyline()
     #     if i > 80: #for plot part of result
     #         ll= len(test.skyline)
     #         test.showSkyline(ll,i)
-         
-    #     # print("test.getWindow()",test.getWindow())
-    #     # print("test.getSkyline()",test.getSkyline())
-    #     # print("test.getSkyline2()",test.getSkyline2())
+    
+        print("---------test.getWindow()",i,"---------")
+        for w in test.getWindow():
+            print(w)
+        print("---------test.skyline()",i,"---------")
+        print(len(test.getSkyline()))
+        for s1 in test.getSkyline():
+            print(s1)
+        
+        
+        # if i ==10:
+        #     break
+        # else:
+        #     continue
+    # print("---------test.skyline2()---------")
+    # for s2 in test.getSkyline2():
+    #     print(s2)     
+    # print("test.getWindow()",test.getWindow())
+    # print("test.getSkyline()",test.getSkyline())
+    #    # print("test.getSkyline2()",test.getSkyline2())
     
     # plt.tight_layout()
     # plt.show()
