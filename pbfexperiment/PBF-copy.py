@@ -3,7 +3,7 @@ import os
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
-
+import time
 
 here = os.path.dirname(os.path.abspath(__file__))
 class PSky():
@@ -352,8 +352,8 @@ def batchImport(csvfile, ps):
     
 if __name__ == '__main__':
     
-    test = pbfsky(100,2, 5, 5, [0,1000], wsize=10)
-    indata = batchImport('100_dim2_pos5_rad5_01000.csv',test.ps)
+    test = pbfsky(10000,2, 5, 5, [0,1000], wsize=300)
+    indata = batchImport('10000_dim2_pos5_rad5_01000.csv',test.ps)
     dqueue = indata[0] #turn inputlist to dqueue
     locatlist = indata[1] #location for
         
@@ -367,11 +367,18 @@ if __name__ == '__main__':
     # print(locatlist)
     # plt.figure(0,figsize=(20,20))
     
-
-    for i in range(100):
+    start_time= time.time()
+    for i in range(10000):
         
         test.receiveData(dqueue[i],locatlist[i])
         test.updateSkyline()
+    
+    totaltime = time.time() - start_time
+    print("--- %s seconds ---" % (totaltime))
+    path = 'test.txt'
+    f = open(path,'a+')
+    f.write('========== poccess = {a} ==========\n' . format(a=totaltime))
+        
     #     if i > 80: #for plot part of result
     #         ll= len(test.skyline)
     #         test.showSkyline(ll,i)
@@ -389,10 +396,10 @@ if __name__ == '__main__':
         #     print(s2)
         
         
-        if i ==10:
-            break
-        else:
-            continue
+        # if i ==10:
+        #     break
+        # else:
+        #     continue
     # print("---------test.skyline2()---------")
     # for s2 in test.getSkyline2():
     #     print(s2)     
