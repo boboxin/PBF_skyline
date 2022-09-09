@@ -232,16 +232,16 @@ class pbfsky(PSky):
         for c1 in range(len(self.locationwindow)):
             for c2 in range(0,len(self.locationwindow),1):
                 tag1 = 0
-                for op in range(test.ps):
-                    for np in range(test.ps):
+                for op in range(self.ps):
+                    for np in range(self.ps):
                         jumptag1 = 0
-                        for d in range(test.dim):
+                        for d in range(self.dim):
                             if  self.locationwindow[c2][np][d] < self.locationwindow[c1][op][d]:
                                 tag1=tag1+1
                             else:
                                 jumptag1=jumptag1+1
                           
-                if tag1 == test.ps*test.ps*test.dim:
+                if tag1 == self.ps*self.ps*self.dim:
                     deltemp.append(c1) 
                 else:
                     continue   
@@ -257,16 +257,16 @@ class pbfsky(PSky):
         for p1 in range(len(pruned_location)):
             for p2 in range(0,len(pruned_location),1):
                 tag2 = 0
-                for op2 in range(test.ps):
-                    for np2 in range(test.ps):
+                for op2 in range(self.ps):
+                    for np2 in range(self.ps):
                         jumptag2 = 0
-                        for dd in range(test.dim):
+                        for dd in range(self.dim):
                             if  pruned_location[p2][np2][dd] < pruned_location[p1][op2][dd]:
                                 tag2=tag2+1
                             else:
                                 jumptag2=jumptag2+1
                           
-                if tag2 == test.ps*test.ps*test.dim:
+                if tag2 == self.ps*self.ps*self.dim:
                     deltemp2.append(p1) 
                 else:
                     continue        
@@ -352,17 +352,17 @@ def batchImport(csvfile, ps):
     
 if __name__ == '__main__':
     
-    test = pbfsky(10000,2, 5, 5, [0,1000], wsize=300)
-    indata = batchImport('10000_dim2_pos5_rad5_01000.csv',test.ps)
+    tbsky = pbfsky(10000,2, 5, 5, [0,1000], wsize=300)
+    indata = batchImport('10000_dim2_pos5_rad5_01000.csv',tbsky.ps)
     dqueue = indata[0] #turn inputlist to dqueue
     locatlist = indata[1] #location for
         
     ### locatlist is the list include location
     # print("------------")
     # for i in range(100):
-    #     for p in range(test.ps):
+    #     for p in range(tbsky.ps):
     #         print("locatlist ",i,locatlist[i][p])
-    #         for dm in range(test.dim):
+    #         for dm in range(tbsky.dim):
     #             print("locatlist ",i,"dm",dm,locatlist[i][p][dm])
     # print(locatlist)
     # plt.figure(0,figsize=(20,20))
@@ -370,29 +370,29 @@ if __name__ == '__main__':
     start_time= time.time()
     for i in range(10000):
         
-        test.receiveData(dqueue[i],locatlist[i])
-        test.updateSkyline()
+        tbsky.receiveData(dqueue[i],locatlist[i])
+        tbsky.updateSkyline()
     
     totaltime = time.time() - start_time
     print("--- %s seconds ---" % (totaltime))
-    path = 'test.txt'
+    path = 'tbsky.txt'
     f = open(path,'a+')
     f.write('========== poccess = {a} ==========\n' . format(a=totaltime))
         
     #     if i > 80: #for plot part of result
-    #         ll= len(test.skyline)
-    #         test.showSkyline(ll,i)
+    #         ll= len(tbsky.skyline)
+    #         tbsky.showSkyline(ll,i)
     
-        # print("---------test.getWindow()",i,"---------")
-        # for w in test.getWindow():
+        # print("---------tbsky.getWindow()",i,"---------")
+        # for w in tbsky.getWindow():
         #     print(w)
-        # print("---------test.skyline()",i,"---------")
-        # print(len(test.getSkyline()))
-        # for s1 in test.getSkyline():
+        # print("---------tbsky.skyline()",i,"---------")
+        # print(len(tbsky.getSkyline()))
+        # for s1 in tbsky.getSkyline():
         #     print(s1)
-        # print("---------test.skyline2()",i,"---------")
-        # print(len(test.getSkyline2()))
-        # for s2 in test.getSkyline2():
+        # print("---------tbsky.skyline2()",i,"---------")
+        # print(len(tbsky.getSkyline2()))
+        # for s2 in tbsky.getSkyline2():
         #     print(s2)
         
         
@@ -400,12 +400,12 @@ if __name__ == '__main__':
         #     break
         # else:
         #     continue
-    # print("---------test.skyline2()---------")
-    # for s2 in test.getSkyline2():
+    # print("---------tbsky.skyline2()---------")
+    # for s2 in tbsky.getSkyline2():
     #     print(s2)     
-    # print("test.getWindow()",test.getWindow())
-    # print("test.getSkyline()",test.getSkyline())
-    #    # print("test.getSkyline2()",test.getSkyline2())
+    # print("tbsky.getWindow()",tbsky.getWindow())
+    # print("tbsky.getSkyline()",tbsky.getSkyline())
+    #    # print("tbsky.getSkyline2()",tbsky.getSkyline2())
     
     # plt.tight_layout()
     # plt.show()
