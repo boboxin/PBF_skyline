@@ -18,24 +18,23 @@ def dim_time():
     for d in dim:
         path = 'pdfex_dim_result.txt'
         f = open(path,'a+')
-        dqueue = batchImport('10000_dim'+str(d)+'_pos5_rad5_01000.csv', 5)
-        inputlist = dqueue[0]
-        inputarray = dqueue[1]#location for
+        indata = batchImport('10000_dim'+str(d)+'_pos5_rad5_01000.csv', 5)
+        dqueue = indata[0] #turn inputlist to dqueue
+        locatlist = indata[1] #location for
         
         print('========== Data dimension = '+ str(d) + ' ==========')
         print('---------- Brute force ----------')
-        tbsky = pbfsky(d, 5, 5, [0,1000], wsize=300)
-        glist=gravity(inputarray,tbsky.ps,tbsky.dim)# turn uncertain data into certain data
+        tbsky = pbfsky(10000,d, 5, 5, [0,1000], wsize=300)
         
         start_time = time.time()
 
         for i in range(10000):
-            tbsky.receiveData(glist[i])
+            tbsky.receiveData(dqueue[i],locatlist[i])
             tbsky.updateSkyline()
         dtime1 = time.time() - start_time
         print("--- %s seconds ---" % (dtime1))
         f.write('========== Data dimension = {a} ==========\n' . format(a=tbsky.dim))
-        f.write('dimension:{a} ; time:{b} \n'.format(a=tbsky.dim,b= dtime1))
+        f.write('dimension:{a} ; time:{b}\n'.format(a=tbsky.dim,b= dtime1))
         
 def dim_avgsk():
     print("=== Test how dimension of data affect candidate size ===")
@@ -43,18 +42,17 @@ def dim_avgsk():
     for d in dim:
         path = 'pdfex_dim_result.txt'
         f = open(path,'a+')
-        dqueue = batchImport('10000_dim'+str(d)+'_pos5_rad5_01000.csv', 5)
-        inputlist = dqueue[0]
-        inputarray = dqueue[1]#location for
+        indata = batchImport('10000_dim'+str(d)+'_pos5_rad5_01000.csv', 5)
+        dqueue = indata[0] #turn inputlist to dqueue
+        locatlist = indata[1] #location for
         
         print('========== Data dimension = '+ str(d) + ' ==========')
         print('---------- Brute force ----------')
-        tbsky = pbfsky(d, 5, 5, [0,1000], wsize=300)
-        glist=gravity(inputarray,tbsky.ps,tbsky.dim)# turn uncertain data into certain data
+        tbsky = pbfsky(10000,d, 5, 5, [0,1000], wsize=300)
         
         avgsk1, avgsk2 = 0, 0
         for i in range(10000):
-            tbsky.receiveData(glist[i])
+            tbsky.receiveData(dqueue[i],locatlist[i])
             tbsky.updateSkyline()
             avgsk1 += len(tbsky.getSkyline())
             avgsk2 += len(tbsky.getSkyline2())

@@ -16,18 +16,17 @@ def instance_time():
     for ins in inst:
         path = 'pdfex_inst_result.txt'
         f = open(path,'a+')
-        dqueue = batchImport('10000_dim2_pos'+str(ins)+'_rad5_01000.csv', ins)
-        inputlist = dqueue[0]
-        inputarray = dqueue[1]#location for
+        indata = batchImport('10000_dim2_pos'+str(ins)+'_rad5_01000.csv', ins)
+        dqueue = indata[0] #turn inputlist to dqueue
+        locatlist = indata[1] #location for
 
         print('========== instance count = '+ str(ins) + ' ==========')
         print('---------- Brute force ----------')
-        tbsky = pbfsky(2, ins, 5, [0,1000], wsize=300)
-        glist=gravity(inputarray,tbsky.ps,tbsky.dim)# turn uncertain data into certain data
+        tbsky = pbfsky(10000,2, ins, 5, [0,1000], wsize=300)
         
         start_time = time.time()
         for i in range(10000):
-            tbsky.receiveData(glist[i])
+            tbsky.receiveData(dqueue[i],locatlist[i])
             tbsky.updateSkyline()
         itime1 = time.time()- start_time 
         print("--- %s seconds ---" % (itime1))
@@ -41,18 +40,18 @@ def instance_avgsk():
     for ins in inst:
         path = 'pdfex_inst_result.txt'
         f = open(path,'a+')
-        dqueue = batchImport('10000_dim2_pos'+str(ins)+'_rad5_01000.csv', ins)
-        inputlist = dqueue[0]
-        inputarray = dqueue[1]#location for
+        indata = batchImport('10000_dim2_pos'+str(ins)+'_rad5_01000.csv', ins)
+        dqueue = indata[0] #turn inputlist to dqueue
+        locatlist = indata[1] #location for
+
         
         print('========== instance count = '+ str(ins) + ' ==========')
         print('---------- Brute force ----------')
-        tbsky = pbfsky(2, ins, 5, [0,1000], wsize=300)
-        glist=gravity(inputarray,tbsky.ps,tbsky.dim)# turn uncertain data into certain data
+        tbsky = pbfsky(10000,2, ins, 5, [0,1000], wsize=300)
         
         avgsk1, avgsk2 = 0, 0
         for i in range(10000):
-            tbsky.receiveData(glist[i])
+            tbsky.receiveData(dqueue[i],locatlist[i])
             tbsky.updateSkyline()
             avgsk1 += len(tbsky.getSkyline())
             avgsk2 += len(tbsky.getSkyline2())
