@@ -49,7 +49,7 @@
   3. Parallel Grid-index Pruning Only (PRGO).
   4. Parallel Brute-Force (PBF).
 
-  - Performance metrixs:
+  - Performance metrics:
   1. Average Latency (Computation Time).
   2. Average Transmission Cost.
   3. Average Sizes of ESK_{k,1} and ESK_{k,2}
