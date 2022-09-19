@@ -1,0 +1,26 @@
+========== Data instance = 3 ==========
+instance:3 ; time:7763.666481733322
+========== Data instance = 4 ==========
+instance:4 ; time:12545.89185333252
+========== Data instance = 5 ==========
+instance:5 ; time:18669.114938497543
+========== Data instance = 6 ==========
+instance:6 ; time:25974.977014303207
+========== Data instance = 7 ==========
+instance:7 ; time:34493.67971587181
+========== Data instance = 8 ==========
+instance:8 ; time:44169.29673552513
+========== Data instance = 9 ==========
+instance:9 ; time:55441.05484986305
+========== Data instance = 10 ==========
+instance:10 ; time:67849.51690745354
+========== Data instance = 3 ==========
+Avg. sky1:8.4126 ; Avg. sky2:10.9532
+========== Data instance = 4 ==========
+Avg. sky1:9.7075 ; Avg. sky2:12.3206
+========== Data instance = 5 ==========
+Avg. sky1:10.1084 ; Avg. sky2:12.1376
+========== Data instance = 6 ==========
+Avg. sky1:9.3905 ; Avg. sky2:12.4251
+========== Data instance = 7 ==========
+Avg. sky1:10.2665 ; Avg. sky2:12.5008
