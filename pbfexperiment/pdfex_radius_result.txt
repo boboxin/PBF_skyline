@@ -1,0 +1,36 @@
+========== Data radius = 4 ==========
+radius:4 ; time:18924.418498516083
+========== Data radius = 6 ==========
+radius:6 ; time:18727.431205034256
+========== Data radius = 8 ==========
+radius:8 ; time:18809.454377412796
+========== Data radius = 10 ==========
+radius:10 ; time:18485.36687397957
+========== Data radius = 12 ==========
+radius:12 ; time:18462.609147310257
+========== Data radius = 14 ==========
+radius:14 ; time:18400.013244867325
+========== Data radius = 16 ==========
+radius:16 ; time:18265.26570749283
+========== Data radius = 18 ==========
+radius:18 ; time:18150.57371902466
+========== Data radius = 20 ==========
+radius:20 ; time:18167.924276828766
+========== Data radius = 4 ==========
+Avg. sky1:9.1061 ; Avg. sky2:11.3365
+========== Data radius = 6 ==========
+Avg. sky1:10.3602 ; Avg. sky2:12.7929
+========== Data radius = 8 ==========
+Avg. sky1:11.8221 ; Avg. sky2:13.6105
+========== Data radius = 10 ==========
+Avg. sky1:13.5138 ; Avg. sky2:14.9727
+========== Data radius = 12 ==========
+Avg. sky1:15.0532 ; Avg. sky2:16.2004
+========== Data radius = 14 ==========
+Avg. sky1:15.0952 ; Avg. sky2:16.4765
+========== Data radius = 16 ==========
+Avg. sky1:18.0941 ; Avg. sky2:19.5205
+========== Data radius = 18 ==========
+Avg. sky1:19.015 ; Avg. sky2:21.0433
+========== Data radius = 20 ==========
+Avg. sky1:19.5318 ; Avg. sky2:21.1508

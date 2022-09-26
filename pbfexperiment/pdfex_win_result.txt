@@ -1,0 +1,8 @@
+========== Data window_size = 100 ==========
+win size:100 ; time:2043.310548067093
+========== Data window_size = 200 ==========
+win size:200 ; time:8339.39965248108
+========== Data window_size = 300 ==========
+win size:300 ; time:18917.6799595356
+========== Data window_size = 400 ==========
+win size:400 ; time:33856.84384918213

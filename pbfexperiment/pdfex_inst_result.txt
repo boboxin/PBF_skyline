@@ -28,3 +28,5 @@ Avg. sky1:10.2665 ; Avg. sky2:12.5008
 Avg. sky1:11.3484 ; Avg. sky2:12.4111
 ========== Data instance = 9 ==========
 Avg. sky1:10.9075 ; Avg. sky2:12.8066
+========== Data instance = 10 ==========
+Avg. sky1:10.5654 ; Avg. sky2:12.5481
