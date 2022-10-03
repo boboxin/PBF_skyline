@@ -6,3 +6,13 @@ win size:200 ; time:8339.39965248108
 win size:300 ; time:18917.6799595356
 ========== Data window_size = 400 ==========
 win size:400 ; time:33856.84384918213
+========== Data window_size = 500 ==========
+win size:500 ; time:52991.80817103386
+========== Data window_size = 600 ==========
+win size:600 ; time:76655.76048779488
+========== Data window_size = 700 ==========
+win size:700 ; time:104241.08149623871
+========== Data window_size = 800 ==========
+win size:800 ; time:136420.96403574944
+========== Data window_size = 900 ==========
+win size:900 ; time:172977.7625029087
