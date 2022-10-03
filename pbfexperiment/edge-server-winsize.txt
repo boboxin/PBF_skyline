@@ -1,0 +1,2361 @@
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.26928210258483887 second
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.3041868209838867 second
+node number 2 get 50 data process 0.2094407081604004 second
+the slowest edge is :1
+edge max time is 0.3041868209838867
+total edge mean is 0.25681376457214355 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.23736572265625 second
+node number 2 get 50 data process 0.2630949020385742 second
+the slowest edge is :2
+edge max time is 0.2630949020385742
+total edge mean is 0.2502303123474121 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.27480196952819824 second
+node number 2 get 50 data process 0.4162120819091797 second
+the slowest edge is :2
+edge max time is 0.4162120819091797
+total edge mean is 0.34550702571868896 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.24724841117858887 second
+node number 2 get 50 data process 0.22152209281921387 second
+the slowest edge is :1
+edge max time is 0.24724841117858887
+total edge mean is 0.23438525199890137 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.23835015296936035 second
+node number 2 get 50 data process 0.20006489753723145 second
+the slowest edge is :1
+edge max time is 0.23835015296936035
+total edge mean is 0.2192075252532959 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.269087553024292 second
+node number 2 get 50 data process 0.2732686996459961 second
+the slowest edge is :2
+edge max time is 0.2732686996459961
+total edge mean is 0.27117812633514404 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.24580812454223633 second
+node number 2 get 50 data process 0.23288655281066895 second
+the slowest edge is :1
+edge max time is 0.24580812454223633
+total edge mean is 0.23934733867645264 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.22138309478759766 second
+node number 2 get 50 data process 0.293501615524292 second
+the slowest edge is :2
+edge max time is 0.293501615524292
+total edge mean is 0.2574423551559448 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.2349386215209961 second
+node number 2 get 50 data process 0.25234532356262207 second
+the slowest edge is :2
+edge max time is 0.25234532356262207
+total edge mean is 0.24364197254180908 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.22432231903076172 second
+node number 2 get 50 data process 0.2975804805755615 second
+the slowest edge is :2
+edge max time is 0.2975804805755615
+total edge mean is 0.2609513998031616 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.2603158950805664 second
+node number 2 get 50 data process 0.23286080360412598 second
+the slowest edge is :1
+edge max time is 0.2603158950805664
+total edge mean is 0.2465883493423462 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.23334956169128418 second
+node number 2 get 50 data process 0.23315024375915527 second
+the slowest edge is :1
+edge max time is 0.23334956169128418
+total edge mean is 0.23324990272521973 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11284470558166504 second
+node number 2 get 50 data process 0.10415458679199219 second
+the slowest edge is :1
+edge max time is 0.11284470558166504
+total edge mean is 0.10849964618682861 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.1629045009613037 second
+node number 2 get 50 data process 0.11729145050048828 second
+the slowest edge is :1
+edge max time is 0.1629045009613037
+total edge mean is 0.140097975730896 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.14450573921203613 second
+node number 2 get 50 data process 0.11158609390258789 second
+the slowest edge is :1
+edge max time is 0.14450573921203613
+total edge mean is 0.128045916557312 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 1115
+node 1 send 1075
+total transmission 2190
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.26327037811279297 second
+node number 2 get 50 data process 0.23636960983276367 second
+the slowest edge is :1
+edge max time is 0.26327037811279297
+total edge mean is 0.24981999397277832 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.23885798454284668 second
+node number 2 get 50 data process 0.28420424461364746 second
+the slowest edge is :2
+edge max time is 0.28420424461364746
+total edge mean is 0.26153111457824707 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.16252708435058594 second
+node number 2 get 50 data process 0.22148466110229492 second
+the slowest edge is :2
+edge max time is 0.22148466110229492
+total edge mean is 0.19200587272644043 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11971783638000488 second
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.21886157989501953 second
+node number 2 get 50 data process 0.2122354507446289 second
+the slowest edge is :1
+edge max time is 0.21886157989501953
+total edge mean is 0.21554851531982422 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.16680240631103516 second
+node number 2 get 50 data process 0.22980833053588867 second
+the slowest edge is :2
+edge max time is 0.22980833053588867
+total edge mean is 0.19830536842346191 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.22725772857666016 second
+node number 2 get 50 data process 0.1730048656463623 second
+the slowest edge is :1
+edge max time is 0.22725772857666016
+total edge mean is 0.20013129711151123 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.2044506072998047 second
+node number 2 get 50 data process 0.21319961547851562 second
+the slowest edge is :2
+edge max time is 0.21319961547851562
+total edge mean is 0.20882511138916016 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.22040963172912598 second
+node number 2 get 50 data process 0.2104353904724121 second
+the slowest edge is :1
+edge max time is 0.22040963172912598
+total edge mean is 0.21542251110076904 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.21023321151733398 second
+node number 2 get 50 data process 0.25032973289489746 second
+the slowest edge is :2
+edge max time is 0.25032973289489746
+total edge mean is 0.23028147220611572 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.22938799858093262 second
+node number 2 get 50 data process 0.16486787796020508 second
+the slowest edge is :1
+edge max time is 0.22938799858093262
+total edge mean is 0.19712793827056885 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.10870909690856934 second
+node number 2 get 50 data process 0.15657329559326172 second
+the slowest edge is :2
+edge max time is 0.15657329559326172
+total edge mean is 0.13264119625091553 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.1181941032409668 second
+node number 2 get 50 data process 0.13964009284973145 second
+the slowest edge is :2
+edge max time is 0.13964009284973145
+total edge mean is 0.12891709804534912 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11405444145202637 second
+node number 2 get 50 data process 0.1341075897216797 second
+the slowest edge is :2
+edge max time is 0.1341075897216797
+total edge mean is 0.12408101558685303 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.14614343643188477 second
+node number 2 get 50 data process 0.11675572395324707 second
+the slowest edge is :1
+edge max time is 0.14614343643188477
+total edge mean is 0.13144958019256592 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11379003524780273 second
+node number 2 get 50 data process 0.1296076774597168 second
+the slowest edge is :2
+edge max time is 0.1296076774597168
+total edge mean is 0.12169885635375977 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11371088027954102 second
+node number 2 get 50 data process 0.13966774940490723 second
+the slowest edge is :2
+edge max time is 0.13966774940490723
+total edge mean is 0.12668931484222412 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.1516423225402832 second
+node number 2 get 50 data process 0.12271356582641602 second
+the slowest edge is :1
+edge max time is 0.1516423225402832
+total edge mean is 0.1371779441833496 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.13666725158691406 second
+node number 2 get 50 data process 0.15415477752685547 second
+the slowest edge is :2
+edge max time is 0.15415477752685547
+total edge mean is 0.14541101455688477 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.12167954444885254 second
+node number 2 get 50 data process 0.13216090202331543 second
+the slowest edge is :2
+edge max time is 0.13216090202331543
+total edge mean is 0.12692022323608398 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11768078804016113 second
+node number 2 get 50 data process 0.14561223983764648 second
+the slowest edge is :2
+edge max time is 0.14561223983764648
+total edge mean is 0.1316465139389038 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.14461684226989746 second
+node number 2 get 50 data process 0.12264537811279297 second
+the slowest edge is :1
+edge max time is 0.14461684226989746
+total edge mean is 0.13363111019134521 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.12330222129821777 second
+node number 2 get 50 data process 0.12334060668945312 second
+the slowest edge is :2
+edge max time is 0.12334060668945312
+total edge mean is 0.12332141399383545 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.10186600685119629 second
+node number 2 get 50 data process 0.11365866661071777 second
+the slowest edge is :2
+edge max time is 0.11365866661071777
+total edge mean is 0.10776233673095703 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.12472176551818848 second
+node number 2 get 50 data process 0.13355374336242676 second
+the slowest edge is :2
+edge max time is 0.13355374336242676
+total edge mean is 0.12913775444030762 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.1573934555053711 second
+node number 2 get 50 data process 0.1284031867980957 second
+the slowest edge is :1
+edge max time is 0.1573934555053711
+total edge mean is 0.1428983211517334 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11975717544555664 second
+node number 2 get 50 data process 0.134230375289917 second
+the slowest edge is :2
+edge max time is 0.134230375289917
+total edge mean is 0.12699377536773682 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.12291288375854492 second
+node number 2 get 50 data process 0.16499757766723633 second
+the slowest edge is :2
+edge max time is 0.16499757766723633
+total edge mean is 0.14395523071289062 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.1246035099029541 second
+node number 2 get 50 data process 0.12421178817749023 second
+the slowest edge is :1
+edge max time is 0.1246035099029541
+total edge mean is 0.12440764904022217 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.14609098434448242 second
+node number 2 get 50 data process 0.12765789031982422 second
+the slowest edge is :1
+edge max time is 0.14609098434448242
+total edge mean is 0.13687443733215332 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.12186622619628906 second
+node number 2 get 50 data process 0.11661100387573242 second
+the slowest edge is :1
+edge max time is 0.12186622619628906
+total edge mean is 0.11923861503601074 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.10780668258666992 second
+node number 2 get 50 data process 0.14955711364746094 second
+the slowest edge is :2
+edge max time is 0.14955711364746094
+total edge mean is 0.12868189811706543 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.10692071914672852 second
+node number 2 get 50 data process 0.1409766674041748 second
+the slowest edge is :2
+edge max time is 0.1409766674041748
+total edge mean is 0.12394869327545166 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11968040466308594 second
+node number 2 get 50 data process 0.1525874137878418 second
+the slowest edge is :2
+edge max time is 0.1525874137878418
+total edge mean is 0.13613390922546387 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.17050528526306152 second
+node number 2 get 50 data process 0.15257763862609863 second
+the slowest edge is :1
+edge max time is 0.17050528526306152
+total edge mean is 0.16154146194458008 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.13930130004882812 second
+node number 2 get 50 data process 0.11569619178771973 second
+the slowest edge is :1
+edge max time is 0.13930130004882812
+total edge mean is 0.12749874591827393 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11266160011291504 second
+node number 2 get 50 data process 0.14987587928771973 second
+the slowest edge is :2
+edge max time is 0.14987587928771973
+total edge mean is 0.13126873970031738 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11443114280700684 second
+node number 2 get 50 data process 0.13982915878295898 second
+the slowest edge is :2
+edge max time is 0.13982915878295898
+total edge mean is 0.1271301507949829 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11599445343017578 second
+node number 2 get 50 data process 0.14601922035217285 second
+the slowest edge is :2
+edge max time is 0.14601922035217285
+total edge mean is 0.13100683689117432 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11075782775878906 second
+node number 2 get 50 data process 0.11760473251342773 second
+the slowest edge is :2
+edge max time is 0.11760473251342773
+total edge mean is 0.1141812801361084 
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11067748069763184 second
+node number 2 get 50 data process 0.11774396896362305 second
+the slowest edge is :2
+edge max time is 0.11774396896362305
+total edge mean is 0.11421072483062744 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 335
+node 1 send 295
+total transmission 630
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.10870981216430664 second
+node number 2 get 50 data process 0.14166736602783203 second
+the slowest edge is :2
+edge max time is 0.14166736602783203
+total edge mean is 0.12518858909606934 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 335
+node 1 send 295
+total transmission 630
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.13611340522766113 second
+node number 2 get 50 data process 0.12166118621826172 second
+the slowest edge is :1
+edge max time is 0.13611340522766113
+total edge mean is 0.12888729572296143 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 335
+node 1 send 295
+total transmission 630
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11569094657897949 second
+node number 2 get 50 data process 0.135636568069458 second
+the slowest edge is :2
+edge max time is 0.135636568069458
+total edge mean is 0.12566375732421875 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 335
+node 1 send 295
+total transmission 630
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.14163446426391602 second
+node number 2 get 50 data process 0.1187279224395752 second
+the slowest edge is :1
+edge max time is 0.14163446426391602
+total edge mean is 0.1301811933517456 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 335
+node 1 send 295
+total transmission 630
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11926937103271484 second
+node number 2 get 50 data process 0.12923574447631836 second
+the slowest edge is :2
+edge max time is 0.12923574447631836
+total edge mean is 0.1242525577545166 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 335
+node 1 send 295
+total transmission 630
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11470365524291992 second
+node number 2 get 50 data process 0.1296994686126709 second
+the slowest edge is :2
+edge max time is 0.1296994686126709
+total edge mean is 0.12220156192779541 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 335
+node 1 send 295
+total transmission 630
+
+server-windowsize is 100 
+server cost time 0.21559381484985352 
+server+max edge time 0.3452932834625244
+
+server-windowsize is 300 
+server cost time 0.2014615535736084 
+server+max edge time 0.3311610221862793
+
+server-windowsize is 500 
+server cost time 0.16657710075378418 
+server+max edge time 0.2962765693664551
+
+server-windowsize is 700 
+server cost time 0.17793703079223633 
+server+max edge time 0.3076364994049072
+
+------ amount of nodes : 2 -------
+edge-windowsize is 300 
+node number 1 get 50 data process 0.7220792770385742 second
+node number 2 get 50 data process 0.8144357204437256 second
+the slowest edge is :2
+edge max time is 0.8144357204437256
+total edge mean is 0.7682574987411499 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 500
+node 1 send 400
+total transmission 900
+
+server-windowsize is 100 
+server cost time 0.32348179817199707 
+server+max edge time 1.1379175186157227
+
+server-windowsize is 300 
+server cost time 0.2603030204772949 
+server+max edge time 1.0747387409210205
+
+server-windowsize is 500 
+server cost time 0.2563149929046631 
+server+max edge time 1.0707507133483887
+
+server-windowsize is 700 
+server cost time 0.24689674377441406 
+server+max edge time 1.0613324642181396
+
+------ amount of nodes : 2 -------
+edge-windowsize is 500 
+node number 1 get 50 data process 1.2014567852020264 second
+node number 2 get 50 data process 1.2836511135101318 second
+the slowest edge is :2
+edge max time is 1.2836511135101318
+total edge mean is 1.242553949356079 
+
+-- Transmission cost with sliding-windows 500--
+node 0 send 485
+node 1 send 359
+total transmission 844
+
+server-windowsize is 100 
+server cost time 0.28025007247924805 
+server+max edge time 1.5639011859893799
+
+server-windowsize is 300 
+server cost time 0.2568690776824951 
+server+max edge time 1.540520191192627
+
+server-windowsize is 500 
+server cost time 0.24787187576293945 
+server+max edge time 1.5315229892730713
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.10675597190856934 second
+node number 2 get 50 data process 0.12171149253845215 second
+the slowest edge is :2
+edge max time is 0.12171149253845215
+total edge mean is 0.11423373222351074 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 335
+node 1 send 295
+total transmission 630
+
+server-windowsize is 100 
+server cost time 0.4378235340118408 
+server+max edge time 0.559535026550293
+
+server-windowsize is 300 
+server cost time 0.3759951591491699 
+server+max edge time 0.49770665168762207
+
+server-windowsize is 500 
+server cost time 0.4130682945251465 
+server+max edge time 0.5347797870635986
+
+server-windowsize is 700 
+server cost time 0.424863338470459 
+server+max edge time 0.5465748310089111
+
+------ amount of nodes : 2 -------
+edge-windowsize is 300 
+node number 1 get 50 data process 0.7047247886657715 second
+node number 2 get 50 data process 0.780052900314331 second
+the slowest edge is :2
+edge max time is 0.780052900314331
+total edge mean is 0.7423888444900513 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 500
+node 1 send 400
+total transmission 900
+
+server-windowsize is 100 
+server cost time 0.5086393356323242 
+server+max edge time 1.2886922359466553
+
+server-windowsize is 300 
+server cost time 0.49567341804504395 
+server+max edge time 1.275726318359375
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.1097254753112793 second
+node number 2 get 50 data process 0.1137382984161377 second
+the slowest edge is :2
+edge max time is 0.1137382984161377
+total edge mean is 0.1117318868637085 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 335
+node 1 send 295
+total transmission 630
+
+server-windowsize is 100 
+server cost time 0.5163865089416504 
+server+max edge time 0.6301248073577881
+
+server-windowsize is 300 
+server cost time 0.46276211738586426 
+server+max edge time 0.576500415802002
+
+server-windowsize is 500 
+server cost time 0.4388272762298584 
+server+max edge time 0.5525655746459961
+
+server-windowsize is 700 
+server cost time 0.4946126937866211 
+server+max edge time 0.6083509922027588
+
+------ amount of nodes : 2 -------
+edge-windowsize is 300 
+node number 1 get 50 data process 0.6969313621520996 second
+node number 2 get 50 data process 0.84075927734375 second
+the slowest edge is :2
+edge max time is 0.84075927734375
+total edge mean is 0.7688453197479248 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 500
+node 1 send 400
+total transmission 900
+
+server-windowsize is 100 
+server cost time 0.713998556137085 
+server+max edge time 1.554757833480835
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11870169639587402 second
+node number 2 get 50 data process 0.154585599899292 second
+the slowest edge is :2
+edge max time is 0.154585599899292
+total edge mean is 0.136643648147583 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 335
+node 1 send 295
+total transmission 630
+
+server-windowsize is 100 
+server cost time 0.50266432762146 
+server+max edge time 0.657249927520752
+
+server-windowsize is 300 
+server cost time 0.4859614372253418 
+server+max edge time 0.6405470371246338
+
+server-windowsize is 500 
+server cost time 0.4971764087677002 
+server+max edge time 0.6517620086669922
+
+server-windowsize is 700 
+server cost time 0.4996616840362549 
+server+max edge time 0.6542472839355469
+
+------ amount of nodes : 2 -------
+edge-windowsize is 300 
+node number 1 get 50 data process 0.6977908611297607 second
+node number 2 get 50 data process 0.7650058269500732 second
+the slowest edge is :2
+edge max time is 0.7650058269500732
+total edge mean is 0.731398344039917 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 500
+node 1 send 400
+total transmission 900
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11473965644836426 second
+node number 2 get 50 data process 0.18350958824157715 second
+the slowest edge is :2
+edge max time is 0.18350958824157715
+total edge mean is 0.1491246223449707 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 335
+node 1 send 295
+total transmission 630
+
+server-windowsize is 100 
+server cost time 0.27426624298095703 
+server+max edge time 0.4577758312225342
+
+server-windowsize is 300 
+server cost time 0.2682809829711914 
+server+max edge time 0.45179057121276855
+
+server-windowsize is 500 
+server cost time 0.2842400074005127 
+server+max edge time 0.46774959564208984
+
+server-windowsize is 700 
+server cost time 0.27525973320007324 
+server+max edge time 0.4587693214416504
+
+------ amount of nodes : 2 -------
+edge-windowsize is 300 
+node number 1 get 50 data process 0.6873002052307129 second
+node number 2 get 50 data process 0.8328118324279785 second
+the slowest edge is :2
+edge max time is 0.8328118324279785
+total edge mean is 0.7600560188293457 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 500
+node 1 send 400
+total transmission 900
+
+server-windowsize is 100 
+server cost time 0.2167356014251709 
+server+max edge time 1.0495474338531494
+
+server-windowsize is 300 
+server cost time 0.2388913631439209 
+server+max edge time 1.0717031955718994
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.1386394500732422 second
+node number 2 get 50 data process 0.1186683177947998 second
+the slowest edge is :1
+edge max time is 0.1386394500732422
+total edge mean is 0.128653883934021 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 335
+node 1 send 295
+total transmission 630
+
+server-windowsize is 100 
+server cost time 0.3997769355773926 
+server+max edge time 0.5384163856506348
+
+server-windowsize is 300 
+server cost time 0.43283796310424805 
+server+max edge time 0.5714774131774902
+
+server-windowsize is 500 
+server cost time 0.3936007022857666 
+server+max edge time 0.5322401523590088
+
+server-windowsize is 700 
+server cost time 0.4033060073852539 
+server+max edge time 0.5419454574584961
+
+------ amount of nodes : 2 -------
+edge-windowsize is 300 
+node number 1 get 50 data process 0.807227611541748 second
+node number 2 get 50 data process 0.9202766418457031 second
+the slowest edge is :2
+edge max time is 0.9202766418457031
+total edge mean is 0.8637521266937256 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 500
+node 1 send 400
+total transmission 900
+
+server-windowsize is 100 
+server cost time 1.4379222393035889 
+server+max edge time 2.358198881149292
+
+server-windowsize is 300 
+server cost time 1.329679250717163 
+server+max edge time 2.249955892562866
+
+server-windowsize is 500 
+server cost time 1.3317797183990479 
+server+max edge time 2.252056360244751
+
+server-windowsize is 700 
+server cost time 1.3612632751464844 
+server+max edge time 2.2815399169921875
+
+------ amount of nodes : 2 -------
+edge-windowsize is 500 
+node number 1 get 50 data process 1.1334798336029053 second
+node number 2 get 50 data process 1.2843127250671387 second
+the slowest edge is :2
+edge max time is 1.2843127250671387
+total edge mean is 1.208896279335022 
+
+-- Transmission cost with sliding-windows 500--
+node 0 send 485
+node 1 send 359
+total transmission 844
+
+server-windowsize is 100 
+server cost time 1.9717504978179932 
+server+max edge time 3.256063222885132
+
+server-windowsize is 300 
+server cost time 2.006361961364746 
+server+max edge time 3.2906746864318848
+
+server-windowsize is 500 
+server cost time 1.9687654972076416 
+server+max edge time 3.2530782222747803
+
+server-windowsize is 700 
+server cost time 1.9253923892974854 
+server+max edge time 3.209705114364624
+
+------ amount of nodes : 2 -------
+edge-windowsize is 700 
+node number 1 get 50 data process 1.139509916305542 second
+node number 2 get 50 data process 1.2388803958892822 second
+the slowest edge is :2
+edge max time is 1.2388803958892822
+total edge mean is 1.189195156097412 
+
+-- Transmission cost with sliding-windows 700--
+node 0 send 485
+node 1 send 359
+total transmission 844
+
+server-windowsize is 100 
+server cost time 2.014369010925293 
+server+max edge time 3.253249406814575
+
+server-windowsize is 300 
+server cost time 1.9248971939086914 
+server+max edge time 3.1637775897979736
+
+server-windowsize is 500 
+server cost time 1.946105718612671 
+server+max edge time 3.184986114501953
+
+server-windowsize is 700 
+server cost time 1.9235260486602783 
+server+max edge time 3.1624064445495605
+
+------ amount of nodes : 4 -------
+edge-windowsize is 100 
+node number 1 get 25 data process 0.05582427978515625 second
+node number 2 get 25 data process 0.0640876293182373 second
+node number 3 get 25 data process 0.08978581428527832 second
+node number 4 get 25 data process 0.05585002899169922 second
+the slowest edge is :3
+edge max time is 0.08978581428527832
+total edge mean is 0.06638693809509277 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 142
+node 1 send 126
+node 2 send 152
+node 3 send 131
+total transmission 551
+
+server-windowsize is 100 
+server cost time 1.506406307220459 
+server+max edge time 1.5961921215057373
+
+server-windowsize is 300 
+server cost time 1.4540960788726807 
+server+max edge time 1.543881893157959
+
+server-windowsize is 500 
+server cost time 1.4370026588439941 
+server+max edge time 1.5267884731292725
+
+server-windowsize is 700 
+server cost time 1.4473764896392822 
+server+max edge time 1.5371623039245605
+
+------ amount of nodes : 4 -------
+edge-windowsize is 300 
+node number 1 get 25 data process 0.15265917778015137 second
+node number 2 get 25 data process 0.16803407669067383 second
+node number 3 get 25 data process 0.18805170059204102 second
+node number 4 get 25 data process 0.15961861610412598 second
+the slowest edge is :3
+edge max time is 0.18805170059204102
+total edge mean is 0.16709089279174805 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 174
+node 1 send 129
+node 2 send 166
+node 3 send 153
+total transmission 622
+
+server-windowsize is 100 
+server cost time 4.177337884902954 
+server+max edge time 4.365389585494995
+
+server-windowsize is 300 
+server cost time 4.064281940460205 
+server+max edge time 4.252333641052246
+
+server-windowsize is 500 
+server cost time 4.216106176376343 
+server+max edge time 4.404157876968384
+
+server-windowsize is 700 
+server cost time 4.113292694091797 
+server+max edge time 4.301344394683838
+
+------ amount of nodes : 4 -------
+edge-windowsize is 500 
+node number 1 get 25 data process 0.17749285697937012 second
+node number 2 get 25 data process 0.17114591598510742 second
+node number 3 get 25 data process 0.15848422050476074 second
+node number 4 get 25 data process 0.1593000888824463 second
+the slowest edge is :1
+edge max time is 0.17749285697937012
+total edge mean is 0.16660577058792114 
+
+-- Transmission cost with sliding-windows 500--
+node 0 send 174
+node 1 send 129
+node 2 send 166
+node 3 send 153
+total transmission 622
+
+server-windowsize is 100 
+server cost time 4.104632139205933 
+server+max edge time 4.282124996185303
+
+server-windowsize is 300 
+server cost time 4.0280601978302 
+server+max edge time 4.20555305480957
+
+server-windowsize is 500 
+server cost time 4.0564210414886475 
+server+max edge time 4.233913898468018
+
+server-windowsize is 700 
+server cost time 4.063748121261597 
+server+max edge time 4.241240978240967
+
+------ amount of nodes : 4 -------
+edge-windowsize is 700 
+node number 1 get 25 data process 0.15262603759765625 second
+node number 2 get 25 data process 0.1884472370147705 second
+node number 3 get 25 data process 0.15559864044189453 second
+node number 4 get 25 data process 0.157623291015625 second
+the slowest edge is :2
+edge max time is 0.1884472370147705
+total edge mean is 0.16357380151748657 
+
+-- Transmission cost with sliding-windows 700--
+node 0 send 174
+node 1 send 129
+node 2 send 166
+node 3 send 153
+total transmission 622
+
+server-windowsize is 100 
+server cost time 4.101558208465576 
+server+max edge time 4.290005445480347
+
+server-windowsize is 300 
+server cost time 4.042235851287842 
+server+max edge time 4.230683088302612
+
+server-windowsize is 500 
+server cost time 4.032503366470337 
+server+max edge time 4.220950603485107
+
+server-windowsize is 700 
+server cost time 4.033240795135498 
+server+max edge time 4.2216880321502686
+
+------ amount of nodes : 6 -------
+edge-windowsize is 100 
+node number 1 get 17 data process 0.03689908981323242 second
+node number 2 get 17 data process 0.030916929244995117 second
+node number 3 get 17 data process 0.03541421890258789 second
+node number 4 get 17 data process 0.03590106964111328 second
+node number 5 get 16 data process 0.04933881759643555 second
+node number 6 get 16 data process 0.03690075874328613 second
+the slowest edge is :5
+edge max time is 0.04933881759643555
+total edge mean is 0.03756181399027506 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 92
+node 1 send 86
+node 2 send 79
+node 3 send 75
+node 4 send 115
+node 5 send 82
+total transmission 529
+
+server-windowsize is 100 
+server cost time 3.7591335773468018 
+server+max edge time 3.8084723949432373
+
+server-windowsize is 300 
+server cost time 3.6377034187316895 
+server+max edge time 3.687042236328125
+
+server-windowsize is 500 
+server cost time 3.6642611026763916 
+server+max edge time 3.713599920272827
+
+server-windowsize is 700 
+server cost time 3.6712117195129395 
+server+max edge time 3.720550537109375
+
+------ amount of nodes : 6 -------
+edge-windowsize is 300 
+node number 1 get 17 data process 0.05780625343322754 second
+node number 2 get 17 data process 0.05485224723815918 second
+node number 3 get 17 data process 0.06240034103393555 second
+node number 4 get 17 data process 0.05507779121398926 second
+node number 5 get 16 data process 0.046837568283081055 second
+node number 6 get 16 data process 0.049379825592041016 second
+the slowest edge is :3
+edge max time is 0.06240034103393555
+total edge mean is 0.054392337799072266 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 93
+node 1 send 76
+node 2 send 76
+node 3 send 78
+node 4 send 118
+node 5 send 79
+total transmission 520
+
+server-windowsize is 100 
+server cost time 5.210105895996094 
+server+max edge time 5.272506237030029
+
+server-windowsize is 300 
+server cost time 5.127542018890381 
+server+max edge time 5.189942359924316
+
+server-windowsize is 500 
+server cost time 5.100426197052002 
+server+max edge time 5.1628265380859375
+
+server-windowsize is 700 
+server cost time 5.174905776977539 
+server+max edge time 5.237306118011475
+
+------ amount of nodes : 6 -------
+edge-windowsize is 500 
+node number 1 get 17 data process 0.05983924865722656 second
+node number 2 get 17 data process 0.05386948585510254 second
+node number 3 get 17 data process 0.08277726173400879 second
+node number 4 get 17 data process 0.05481457710266113 second
+node number 5 get 16 data process 0.05085420608520508 second
+node number 6 get 16 data process 0.06283187866210938 second
+the slowest edge is :3
+edge max time is 0.08277726173400879
+total edge mean is 0.06083110968271891 
+
+-- Transmission cost with sliding-windows 500--
+node 0 send 93
+node 1 send 76
+node 2 send 76
+node 3 send 78
+node 4 send 118
+node 5 send 79
+total transmission 520
+
+server-windowsize is 100 
+server cost time 5.166284561157227 
+server+max edge time 5.249061822891235
+
+server-windowsize is 300 
+server cost time 5.122352123260498 
+server+max edge time 5.205129384994507
+
+server-windowsize is 500 
+server cost time 5.182606935501099 
+server+max edge time 5.265384197235107
+
+server-windowsize is 700 
+server cost time 5.125436067581177 
+server+max edge time 5.2082133293151855
+
+------ amount of nodes : 6 -------
+edge-windowsize is 700 
+node number 1 get 17 data process 0.07077264785766602 second
+node number 2 get 17 data process 0.0608367919921875 second
+node number 3 get 17 data process 0.05781698226928711 second
+node number 4 get 17 data process 0.07179713249206543 second
+node number 5 get 16 data process 0.04787135124206543 second
+node number 6 get 16 data process 0.051619529724121094 second
+the slowest edge is :4
+edge max time is 0.07179713249206543
+total edge mean is 0.060119072596232094 
+
+-- Transmission cost with sliding-windows 700--
+node 0 send 93
+node 1 send 76
+node 2 send 76
+node 3 send 78
+node 4 send 118
+node 5 send 79
+total transmission 520
+
+server-windowsize is 100 
+server cost time 5.138735055923462 
+server+max edge time 5.210532188415527
+
+server-windowsize is 300 
+server cost time 5.161953687667847 
+server+max edge time 5.233750820159912
+
+server-windowsize is 500 
+server cost time 5.143484115600586 
+server+max edge time 5.215281248092651
+
+server-windowsize is 700 
+server cost time 5.115886449813843 
+server+max edge time 5.187683582305908
+
+------ amount of nodes : 8 -------
+edge-windowsize is 100 
+node number 1 get 13 data process 0.01896357536315918 second
+node number 2 get 13 data process 0.05086970329284668 second
+node number 3 get 13 data process 0.023935317993164062 second
+node number 4 get 13 data process 0.02296137809753418 second
+node number 5 get 12 data process 0.019946575164794922 second
+node number 6 get 12 data process 0.019956111907958984 second
+node number 7 get 12 data process 0.016981124877929688 second
+node number 8 get 12 data process 0.017953157424926758 second
+the slowest edge is :2
+edge max time is 0.05086970329284668
+total edge mean is 0.023945868015289307 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 63
+node 1 send 44
+node 2 send 67
+node 3 send 50
+node 4 send 54
+node 5 send 54
+node 6 send 57
+node 7 send 60
+total transmission 449
+
+server-windowsize is 100 
+server cost time 6.258098125457764 
+server+max edge time 6.30896782875061
+
+server-windowsize is 300 
+server cost time 6.22109055519104 
+server+max edge time 6.271960258483887
+
+server-windowsize is 500 
+server cost time 6.196993589401245 
+server+max edge time 6.247863292694092
+
+server-windowsize is 700 
+server cost time 6.171931266784668 
+server+max edge time 6.222800970077515
+
+------ amount of nodes : 8 -------
+edge-windowsize is 300 
+node number 1 get 13 data process 0.026926279067993164 second
+node number 2 get 13 data process 0.032911062240600586 second
+node number 3 get 13 data process 0.02596259117126465 second
+node number 4 get 13 data process 0.025960206985473633 second
+node number 5 get 12 data process 0.019962787628173828 second
+node number 6 get 12 data process 0.01798868179321289 second
+node number 7 get 12 data process 0.02696681022644043 second
+node number 8 get 12 data process 0.022901296615600586 second
+the slowest edge is :2
+edge max time is 0.032911062240600586
+total edge mean is 0.02494746446609497 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 63
+node 1 send 41
+node 2 send 64
+node 3 send 52
+node 4 send 50
+node 5 send 54
+node 6 send 55
+node 7 send 61
+total transmission 440
+
+server-windowsize is 100 
+server cost time 6.743950843811035 
+server+max edge time 6.776861906051636
+
+server-windowsize is 300 
+server cost time 6.823593616485596 
+server+max edge time 6.856504678726196
+
+server-windowsize is 500 
+server cost time 6.732575416564941 
+server+max edge time 6.765486478805542
+
+server-windowsize is 700 
+server cost time 6.6974194049835205 
+server+max edge time 6.730330467224121
+
+------ amount of nodes : 8 -------
+edge-windowsize is 500 
+node number 1 get 13 data process 0.03444075584411621 second
+node number 2 get 13 data process 0.038854122161865234 second
+node number 3 get 13 data process 0.021975994110107422 second
+node number 4 get 13 data process 0.03936958312988281 second
+node number 5 get 12 data process 0.025930166244506836 second
+node number 6 get 12 data process 0.024929523468017578 second
+node number 7 get 12 data process 0.02094435691833496 second
+node number 8 get 12 data process 0.018948793411254883 second
+the slowest edge is :4
+edge max time is 0.03936958312988281
+total edge mean is 0.028174161911010742 
+
+-- Transmission cost with sliding-windows 500--
+node 0 send 63
+node 1 send 41
+node 2 send 64
+node 3 send 52
+node 4 send 50
+node 5 send 54
+node 6 send 55
+node 7 send 61
+total transmission 440
+
+server-windowsize is 100 
+server cost time 6.77323317527771 
+server+max edge time 6.812602758407593
+
+server-windowsize is 300 
+server cost time 6.689837217330933 
+server+max edge time 6.729206800460815
+
+server-windowsize is 500 
+server cost time 6.749499082565308 
+server+max edge time 6.78886866569519
+
+server-windowsize is 700 
+server cost time 6.701075553894043 
+server+max edge time 6.740445137023926
+
+------ amount of nodes : 8 -------
+edge-windowsize is 700 
+node number 1 get 13 data process 0.024938106536865234 second
+node number 2 get 13 data process 0.04088902473449707 second
+node number 3 get 13 data process 0.027922868728637695 second
+node number 4 get 13 data process 0.03490781784057617 second
+node number 5 get 12 data process 0.02293992042541504 second
+node number 6 get 12 data process 0.0199429988861084 second
+node number 7 get 12 data process 0.04086637496948242 second
+node number 8 get 12 data process 0.022896528244018555 second
+the slowest edge is :2
+edge max time is 0.04088902473449707
+total edge mean is 0.029412955045700073 
+
+-- Transmission cost with sliding-windows 700--
+node 0 send 63
+node 1 send 41
+node 2 send 64
+node 3 send 52
+node 4 send 50
+node 5 send 54
+node 6 send 55
+node 7 send 61
+total transmission 440
+
+server-windowsize is 100 
+server cost time 6.763054847717285 
+server+max edge time 6.803943872451782
+
+server-windowsize is 300 
+server cost time 6.815160036087036 
+server+max edge time 6.856049060821533
+
+server-windowsize is 500 
+server cost time 7.176171541213989 
+server+max edge time 7.217060565948486
+
+server-windowsize is 700 
+server cost time 6.807065725326538 
+server+max edge time 6.847954750061035
+
+------ amount of nodes : 10 -------
+edge-windowsize is 100 
+node number 1 get 10 data process 0.00997161865234375 second
+node number 2 get 10 data process 0.012991189956665039 second
+node number 3 get 10 data process 0.027413368225097656 second
+node number 4 get 10 data process 0.011968851089477539 second
+node number 5 get 10 data process 0.011961936950683594 second
+node number 6 get 10 data process 0.016917943954467773 second
+node number 7 get 10 data process 0.012957096099853516 second
+node number 8 get 10 data process 0.014959096908569336 second
+node number 9 get 10 data process 0.012966394424438477 second
+node number 10 get 10 data process 0.015982389450073242 second
+the slowest edge is :3
+edge max time is 0.027413368225097656
+total edge mean is 0.014808988571166993 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 42
+node 1 send 43
+node 2 send 54
+node 3 send 39
+node 4 send 41
+node 5 send 31
+node 6 send 52
+node 7 send 42
+node 8 send 51
+node 9 send 26
+total transmission 421
+
+server-windowsize is 100 
+server cost time 7.4524548053741455 
+server+max edge time 7.479868173599243
+
+server-windowsize is 300 
+server cost time 7.43854832649231 
+server+max edge time 7.465961694717407
+
+server-windowsize is 500 
+server cost time 7.378555774688721 
+server+max edge time 7.405969142913818
+
+server-windowsize is 700 
+server cost time 7.373492956161499 
+server+max edge time 7.400906324386597
+
+------ amount of nodes : 10 -------
+edge-windowsize is 300 
+node number 1 get 10 data process 0.008975744247436523 second
+node number 2 get 10 data process 0.038887739181518555 second
+node number 3 get 10 data process 0.012927770614624023 second
+node number 4 get 10 data process 0.01791691780090332 second
+node number 5 get 10 data process 0.010970354080200195 second
+node number 6 get 10 data process 0.0139617919921875 second
+node number 7 get 10 data process 0.008976221084594727 second
+node number 8 get 10 data process 0.012971162796020508 second
+node number 9 get 10 data process 0.02393627166748047 second
+node number 10 get 10 data process 0.012965679168701172 second
+the slowest edge is :2
+edge max time is 0.038887739181518555
+total edge mean is 0.0162489652633667 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 42
+node 1 send 43
+node 2 send 54
+node 3 send 39
+node 4 send 41
+node 5 send 31
+node 6 send 52
+node 7 send 42
+node 8 send 51
+node 9 send 26
+total transmission 421
+
+server-windowsize is 100 
+server cost time 7.461336612701416 
+server+max edge time 7.500224351882935
+
+server-windowsize is 300 
+server cost time 7.308999538421631 
+server+max edge time 7.347887277603149
+
+server-windowsize is 500 
+server cost time 7.4426960945129395 
+server+max edge time 7.481583833694458
+
+server-windowsize is 700 
+server cost time 7.425462245941162 
+server+max edge time 7.464349985122681
+
+------ amount of nodes : 10 -------
+edge-windowsize is 500 
+node number 1 get 10 data process 0.025888681411743164 second
+node number 2 get 10 data process 0.014958858489990234 second
+node number 3 get 10 data process 0.013917207717895508 second
+node number 4 get 10 data process 0.01591944694519043 second
+node number 5 get 10 data process 0.012968778610229492 second
+node number 6 get 10 data process 0.01595592498779297 second
+node number 7 get 10 data process 0.013980388641357422 second
+node number 8 get 10 data process 0.009975671768188477 second
+node number 9 get 10 data process 0.015956878662109375 second
+node number 10 get 10 data process 0.01994037628173828 second
+the slowest edge is :1
+edge max time is 0.025888681411743164
+total edge mean is 0.015946221351623536 
+
+-- Transmission cost with sliding-windows 500--
+node 0 send 42
+node 1 send 43
+node 2 send 54
+node 3 send 39
+node 4 send 41
+node 5 send 31
+node 6 send 52
+node 7 send 42
+node 8 send 51
+node 9 send 26
+total transmission 421
+
+server-windowsize is 100 
+server cost time 7.382390260696411 
+server+max edge time 7.408278942108154
+
+server-windowsize is 300 
+server cost time 7.3501482009887695 
+server+max edge time 7.376036882400513
+
+server-windowsize is 500 
+server cost time 7.301763296127319 
+server+max edge time 7.3276519775390625
+
+server-windowsize is 700 
+server cost time 7.348255157470703 
+server+max edge time 7.374143838882446
+
+------ amount of nodes : 10 -------
+edge-windowsize is 700 
+node number 1 get 10 data process 0.011929988861083984 second
+node number 2 get 10 data process 0.011994600296020508 second
+node number 3 get 10 data process 0.01196908950805664 second
+node number 4 get 10 data process 0.03291153907775879 second
+node number 5 get 10 data process 0.009533882141113281 second
+node number 6 get 10 data process 0.021933555603027344 second
+node number 7 get 10 data process 0.012970447540283203 second
+node number 8 get 10 data process 0.010971307754516602 second
+node number 9 get 10 data process 0.011981725692749023 second
+node number 10 get 10 data process 0.01547551155090332 second
+the slowest edge is :4
+edge max time is 0.03291153907775879
+total edge mean is 0.015167164802551269 
+
+-- Transmission cost with sliding-windows 700--
+node 0 send 42
+node 1 send 43
+node 2 send 54
+node 3 send 39
+node 4 send 41
+node 5 send 31
+node 6 send 52
+node 7 send 42
+node 8 send 51
+node 9 send 26
+total transmission 421
+
+server-windowsize is 100 
+server cost time 7.333493232727051 
+server+max edge time 7.36640477180481
+
+server-windowsize is 300 
+server cost time 7.347062826156616 
+server+max edge time 7.379974365234375
+
+server-windowsize is 500 
+server cost time 7.357356786727905 
+server+max edge time 7.390268325805664
+
+server-windowsize is 700 
+server cost time 7.34246563911438 
+server+max edge time 7.375377178192139
+
+------ amount of nodes : 12 -------
+edge-windowsize is 100 
+node number 1 get 9 data process 0.008977174758911133 second
+node number 2 get 9 data process 0.007979154586791992 second
+node number 3 get 9 data process 0.03191423416137695 second
+node number 4 get 9 data process 0.007991313934326172 second
+node number 5 get 8 data process 0.006955146789550781 second
+node number 6 get 8 data process 0.006985902786254883 second
+node number 7 get 8 data process 0.006944417953491211 second
+node number 8 get 8 data process 0.0049893856048583984 second
+node number 9 get 8 data process 0.004986763000488281 second
+node number 10 get 8 data process 0.007977008819580078 second
+node number 11 get 8 data process 0.006982326507568359 second
+node number 12 get 8 data process 0.005983829498291016 second
+the slowest edge is :3
+edge max time is 0.03191423416137695
+total edge mean is 0.009055554866790771 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 27
+node 1 send 30
+node 2 send 33
+node 3 send 39
+node 4 send 35
+node 5 send 29
+node 6 send 31
+node 7 send 35
+node 8 send 20
+node 9 send 27
+node 10 send 36
+node 11 send 25
+total transmission 367
+
+server-windowsize is 100 
+server cost time 8.149803161621094 
+server+max edge time 8.18171739578247
+
+server-windowsize is 300 
+server cost time 8.062724351882935 
+server+max edge time 8.094638586044312
+
+server-windowsize is 500 
+server cost time 8.08582878112793 
+server+max edge time 8.117743015289307
+
+server-windowsize is 700 
+server cost time 8.374595880508423 
+server+max edge time 8.4065101146698
+
+------ amount of nodes : 12 -------
+edge-windowsize is 300 
+node number 1 get 9 data process 0.014960289001464844 second
+node number 2 get 9 data process 0.0069806575775146484 second
+node number 3 get 9 data process 0.017951488494873047 second
+node number 4 get 9 data process 0.014960289001464844 second
+node number 5 get 8 data process 0.003988981246948242 second
+node number 6 get 8 data process 0.010976552963256836 second
+node number 7 get 8 data process 0.009974002838134766 second
+node number 8 get 8 data process 0.004986286163330078 second
+node number 9 get 8 data process 0.00498652458190918 second
+node number 10 get 8 data process 0.008975744247436523 second
+node number 11 get 8 data process 0.008981704711914062 second
+node number 12 get 8 data process 0.006981611251831055 second
+the slowest edge is :3
+edge max time is 0.017951488494873047
+total edge mean is 0.009558677673339844 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 27
+node 1 send 30
+node 2 send 33
+node 3 send 39
+node 4 send 35
+node 5 send 29
+node 6 send 31
+node 7 send 35
+node 8 send 20
+node 9 send 27
+node 10 send 36
+node 11 send 25
+total transmission 367
+
+server-windowsize is 100 
+server cost time 8.287241220474243 
+server+max edge time 8.305192708969116
+
+server-windowsize is 300 
+server cost time 8.303284645080566 
+server+max edge time 8.32123613357544
+
+server-windowsize is 500 
+server cost time 8.156126022338867 
+server+max edge time 8.17407751083374
+
+server-windowsize is 700 
+server cost time 8.602396726608276 
+server+max edge time 8.62034821510315
+
+------ amount of nodes : 12 -------
+edge-windowsize is 500 
+node number 1 get 9 data process 0.008940935134887695 second
+node number 2 get 9 data process 0.006980419158935547 second
+node number 3 get 9 data process 0.012030363082885742 second
+node number 4 get 9 data process 0.007975339889526367 second
+node number 5 get 8 data process 0.004985332489013672 second
+node number 6 get 8 data process 0.006983280181884766 second
+node number 7 get 8 data process 0.006029367446899414 second
+node number 8 get 8 data process 0.008992910385131836 second
+node number 9 get 8 data process 0.00594639778137207 second
+node number 10 get 8 data process 0.004981040954589844 second
+node number 11 get 8 data process 0.00793910026550293 second
+node number 12 get 8 data process 0.008020162582397461 second
+the slowest edge is :3
+edge max time is 0.012030363082885742
+total edge mean is 0.007483720779418945 
+
+-- Transmission cost with sliding-windows 500--
+node 0 send 27
+node 1 send 30
+node 2 send 33
+node 3 send 39
+node 4 send 35
+node 5 send 29
+node 6 send 31
+node 7 send 35
+node 8 send 20
+node 9 send 27
+node 10 send 36
+node 11 send 25
+total transmission 367
+
+server-windowsize is 100 
+server cost time 8.581798315048218 
+server+max edge time 8.593828678131104
+
+server-windowsize is 300 
+server cost time 8.011765480041504 
+server+max edge time 8.02379584312439
+
+server-windowsize is 500 
+server cost time 8.003142356872559 
+server+max edge time 8.015172719955444
+
+server-windowsize is 700 
+server cost time 8.037858009338379 
+server+max edge time 8.049888372421265
+
+------ amount of nodes : 12 -------
+edge-windowsize is 700 
+node number 1 get 9 data process 0.02293872833251953 second
+node number 2 get 9 data process 0.01196742057800293 second
+node number 3 get 9 data process 0.0139617919921875 second
+node number 4 get 9 data process 0.011965513229370117 second
+node number 5 get 8 data process 0.007978200912475586 second
+node number 6 get 8 data process 0.009973287582397461 second
+node number 7 get 8 data process 0.011967182159423828 second
+node number 8 get 8 data process 0.006006479263305664 second
+node number 9 get 8 data process 0.008972406387329102 second
+node number 10 get 8 data process 0.010970830917358398 second
+node number 11 get 8 data process 0.0069811344146728516 second
+node number 12 get 8 data process 0.008971691131591797 second
+the slowest edge is :1
+edge max time is 0.02293872833251953
+total edge mean is 0.011054555575052897 
+
+-- Transmission cost with sliding-windows 700--
+node 0 send 27
+node 1 send 30
+node 2 send 33
+node 3 send 39
+node 4 send 35
+node 5 send 29
+node 6 send 31
+node 7 send 35
+node 8 send 20
+node 9 send 27
+node 10 send 36
+node 11 send 25
+total transmission 367
+
+server-windowsize is 100 
+server cost time 8.60376524925232 
+server+max edge time 8.626703977584839
+
+server-windowsize is 300 
+server cost time 7.99578070640564 
+server+max edge time 8.01871943473816
+
+server-windowsize is 500 
+server cost time 7.963274002075195 
+server+max edge time 7.986212730407715
+
+server-windowsize is 700 
+server cost time 8.004342079162598 
+server+max edge time 8.027280807495117
+
+------ amount of nodes : 14 -------
+edge-windowsize is 100 
+node number 1 get 8 data process 0.0059473514556884766 second
+node number 2 get 8 data process 0.006941080093383789 second
+node number 3 get 7 data process 0.003980875015258789 second
+node number 4 get 7 data process 0.005982637405395508 second
+node number 5 get 7 data process 0.006010293960571289 second
+node number 6 get 7 data process 0.004985809326171875 second
+node number 7 get 7 data process 0.005985736846923828 second
+node number 8 get 7 data process 0.005980491638183594 second
+node number 9 get 7 data process 0.003982067108154297 second
+node number 10 get 7 data process 0.002991914749145508 second
+node number 11 get 7 data process 0.003988981246948242 second
+node number 12 get 7 data process 0.004980564117431641 second
+node number 13 get 7 data process 0.00497746467590332 second
+node number 14 get 7 data process 0.005945682525634766 second
+the slowest edge is :2
+edge max time is 0.006941080093383789
+total edge mean is 0.0051914964403424945 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 32
+node 1 send 25
+node 2 send 24
+node 3 send 19
+node 4 send 23
+node 5 send 21
+node 6 send 25
+node 7 send 20
+node 8 send 14
+node 9 send 26
+node 10 send 23
+node 11 send 20
+node 12 send 15
+node 13 send 20
+total transmission 307
+
+server-windowsize is 100 
+server cost time 7.282071590423584 
+server+max edge time 7.289012670516968
+
+server-windowsize is 300 
+server cost time 7.190348863601685 
+server+max edge time 7.197289943695068
+
+server-windowsize is 500 
+server cost time 7.197859764099121 
+server+max edge time 7.204800844192505
+
+server-windowsize is 700 
+server cost time 7.20113730430603 
+server+max edge time 7.208078384399414
+
+------ amount of nodes : 14 -------
+edge-windowsize is 300 
+node number 1 get 8 data process 0.007977962493896484 second
+node number 2 get 8 data process 0.003978252410888672 second
+node number 3 get 7 data process 0.00403904914855957 second
+node number 4 get 7 data process 0.004984140396118164 second
+node number 5 get 7 data process 0.0039861202239990234 second
+node number 6 get 7 data process 0.0049860477447509766 second
+node number 7 get 7 data process 0.0069811344146728516 second
+node number 8 get 7 data process 0.005983114242553711 second
+node number 9 get 7 data process 0.005983591079711914 second
+node number 10 get 7 data process 0.00898289680480957 second
+node number 11 get 7 data process 0.0029914379119873047 second
+node number 12 get 7 data process 0.004985809326171875 second
+node number 13 get 7 data process 0.00397491455078125 second
+node number 14 get 7 data process 0.005983114242553711 second
+the slowest edge is :10
+edge max time is 0.00898289680480957
+total edge mean is 0.005415541785103934 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 32
+node 1 send 25
+node 2 send 24
+node 3 send 19
+node 4 send 23
+node 5 send 21
+node 6 send 25
+node 7 send 20
+node 8 send 14
+node 9 send 26
+node 10 send 23
+node 11 send 20
+node 12 send 15
+node 13 send 20
+total transmission 307
+
+server-windowsize is 100 
+server cost time 7.324496269226074 
+server+max edge time 7.333479166030884
+
+server-windowsize is 300 
+server cost time 7.211408376693726 
+server+max edge time 7.220391273498535
+
+server-windowsize is 500 
+server cost time 7.189967155456543 
+server+max edge time 7.1989500522613525
+
+server-windowsize is 700 
+server cost time 7.148578405380249 
+server+max edge time 7.157561302185059
+
+------ amount of nodes : 14 -------
+edge-windowsize is 500 
+node number 1 get 8 data process 0.008975982666015625 second
+node number 2 get 8 data process 0.005983591079711914 second
+node number 3 get 7 data process 0.006004810333251953 second
+node number 4 get 7 data process 0.003989696502685547 second
+node number 5 get 7 data process 0.003990650177001953 second
+node number 6 get 7 data process 0.0040090084075927734 second
+node number 7 get 7 data process 0.006002902984619141 second
+node number 8 get 7 data process 0.00498652458190918 second
+node number 9 get 7 data process 0.028923511505126953 second
+node number 10 get 7 data process 0.002991199493408203 second
+node number 11 get 7 data process 0.003988981246948242 second
+node number 12 get 7 data process 0.0069811344146728516 second
+node number 13 get 7 data process 0.00399017333984375 second
+node number 14 get 7 data process 0.003972768783569336 second
+the slowest edge is :9
+edge max time is 0.028923511505126953
+total edge mean is 0.0067707811083112445 
+
+-- Transmission cost with sliding-windows 500--
+node 0 send 32
+node 1 send 25
+node 2 send 24
+node 3 send 19
+node 4 send 23
+node 5 send 21
+node 6 send 25
+node 7 send 20
+node 8 send 14
+node 9 send 26
+node 10 send 23
+node 11 send 20
+node 12 send 15
+node 13 send 20
+total transmission 307
+
+server-windowsize is 100 
+server cost time 7.314528942108154 
+server+max edge time 7.343452453613281
+
+server-windowsize is 300 
+server cost time 7.229999780654907 
+server+max edge time 7.258923292160034
+
+server-windowsize is 500 
+server cost time 7.180588722229004 
+server+max edge time 7.209512233734131
+
+server-windowsize is 700 
+server cost time 7.184900522232056 
+server+max edge time 7.213824033737183
+
+------ amount of nodes : 14 -------
+edge-windowsize is 700 
+node number 1 get 8 data process 0.006023406982421875 second
+node number 2 get 8 data process 0.00602412223815918 second
+node number 3 get 7 data process 0.0039942264556884766 second
+node number 4 get 7 data process 0.004027366638183594 second
+node number 5 get 7 data process 0.004988193511962891 second
+node number 6 get 7 data process 0.010970592498779297 second
+node number 7 get 7 data process 0.00698089599609375 second
+node number 8 get 7 data process 0.003986835479736328 second
+node number 9 get 7 data process 0.004988431930541992 second
+node number 10 get 7 data process 0.007977724075317383 second
+node number 11 get 7 data process 0.005953788757324219 second
+node number 12 get 7 data process 0.0039980411529541016 second
+node number 13 get 7 data process 0.005945920944213867 second
+node number 14 get 7 data process 0.004987955093383789 second
+the slowest edge is :6
+edge max time is 0.010970592498779297
+total edge mean is 0.005774821553911481 
+
+-- Transmission cost with sliding-windows 700--
+node 0 send 32
+node 1 send 25
+node 2 send 24
+node 3 send 19
+node 4 send 23
+node 5 send 21
+node 6 send 25
+node 7 send 20
+node 8 send 14
+node 9 send 26
+node 10 send 23
+node 11 send 20
+node 12 send 15
+node 13 send 20
+total transmission 307
+
+server-windowsize is 100 
+server cost time 7.503472089767456 
+server+max edge time 7.514442682266235
+
+server-windowsize is 300 
+server cost time 7.212792873382568 
+server+max edge time 7.223763465881348
+
+server-windowsize is 500 
+server cost time 7.175684213638306 
+server+max edge time 7.186654806137085
+
+server-windowsize is 700 
+server cost time 7.217092514038086 
+server+max edge time 7.228063106536865
+
+------ amount of nodes : 16 -------
+edge-windowsize is 100 
+node number 1 get 7 data process 0.004985809326171875 second
+node number 2 get 7 data process 0.008017301559448242 second
+node number 3 get 7 data process 0.0029921531677246094 second
+node number 4 get 7 data process 0.005982398986816406 second
+node number 5 get 6 data process 0.0029866695404052734 second
+node number 6 get 6 data process 0.004984617233276367 second
+node number 7 get 6 data process 0.0029916763305664062 second
+node number 8 get 6 data process 0.003989696502685547 second
+node number 9 get 6 data process 0.0029935836791992188 second
+node number 10 get 6 data process 0.0019943714141845703 second
+node number 11 get 6 data process 0.00299072265625 second
+node number 12 get 6 data process 0.003988027572631836 second
+node number 13 get 6 data process 0.002991914749145508 second
+node number 14 get 6 data process 0.002000570297241211 second
+node number 15 get 6 data process 0.0029935836791992188 second
+node number 16 get 6 data process 0.0029981136322021484 second
+the slowest edge is :2
+edge max time is 0.008017301559448242
+total edge mean is 0.0037425756454467773 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 18
+node 1 send 17
+node 2 send 27
+node 3 send 21
+node 4 send 15
+node 5 send 16
+node 6 send 20
+node 7 send 20
+node 8 send 21
+node 9 send 19
+node 10 send 19
+node 11 send 20
+node 12 send 17
+node 13 send 16
+node 14 send 17
+node 15 send 20
+total transmission 303
+
+server-windowsize is 100 
+server cost time 8.780632019042969 
+server+max edge time 8.788649320602417
+
+server-windowsize is 300 
+server cost time 8.827197790145874 
+server+max edge time 8.835215091705322
+
+server-windowsize is 500 
+server cost time 8.657137155532837 
+server+max edge time 8.665154457092285
+
+server-windowsize is 700 
+server cost time 8.668360233306885 
+server+max edge time 8.676377534866333
+
+------ amount of nodes : 16 -------
+edge-windowsize is 300 
+node number 1 get 7 data process 0.004999399185180664 second
+node number 2 get 7 data process 0.003962039947509766 second
+node number 3 get 7 data process 0.003988504409790039 second
+node number 4 get 7 data process 0.003988981246948242 second
+node number 5 get 6 data process 0.001993417739868164 second
+node number 6 get 6 data process 0.0029909610748291016 second
+node number 7 get 6 data process 0.003989458084106445 second
+node number 8 get 6 data process 0.0019953250885009766 second
+node number 9 get 6 data process 0.00299835205078125 second
+node number 10 get 6 data process 0.001957416534423828 second
+node number 11 get 6 data process 0.001992940902709961 second
+node number 12 get 6 data process 0.002992391586303711 second
+node number 13 get 6 data process 0.0019922256469726562 second
+node number 14 get 6 data process 0.0029523372650146484 second
+node number 15 get 6 data process 0.003989219665527344 second
+node number 16 get 6 data process 0.0019943714141845703 second
+the slowest edge is :1
+edge max time is 0.004999399185180664
+total edge mean is 0.0030485838651657104 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 18
+node 1 send 17
+node 2 send 27
+node 3 send 21
+node 4 send 15
+node 5 send 16
+node 6 send 20
+node 7 send 20
+node 8 send 21
+node 9 send 19
+node 10 send 19
+node 11 send 20
+node 12 send 17
+node 13 send 16
+node 14 send 17
+node 15 send 20
+total transmission 303
+
+server-windowsize is 100 
+server cost time 8.656469583511353 
+server+max edge time 8.661468982696533
+
+server-windowsize is 300 
+server cost time 8.75778579711914 
+server+max edge time 8.762785196304321
+
+server-windowsize is 500 
+server cost time 8.804505109786987 
+server+max edge time 8.809504508972168
+
+server-windowsize is 700 
+server cost time 9.329914093017578 
+server+max edge time 9.334913492202759
+
+------ amount of nodes : 16 -------
+edge-windowsize is 500 
+node number 1 get 7 data process 0.004001140594482422 second
+node number 2 get 7 data process 0.004952907562255859 second
+node number 3 get 7 data process 0.0039942264556884766 second
+node number 4 get 7 data process 0.004988670349121094 second
+node number 5 get 6 data process 0.002992391586303711 second
+node number 6 get 6 data process 0.0049359798431396484 second
+node number 7 get 6 data process 0.027925729751586914 second
+node number 8 get 6 data process 0.003016233444213867 second
+node number 9 get 6 data process 0.002975940704345703 second
+node number 10 get 6 data process 0.0029516220092773438 second
+node number 11 get 6 data process 0.004991769790649414 second
+node number 12 get 6 data process 0.0019686222076416016 second
+node number 13 get 6 data process 0.001994609832763672 second
+node number 14 get 6 data process 0.003989696502685547 second
+node number 15 get 6 data process 0.0019538402557373047 second
+node number 16 get 6 data process 0.003988981246948242 second
+the slowest edge is :7
+edge max time is 0.027925729751586914
+total edge mean is 0.005101397633552551 
+
+-- Transmission cost with sliding-windows 500--
+node 0 send 18
+node 1 send 17
+node 2 send 27
+node 3 send 21
+node 4 send 15
+node 5 send 16
+node 6 send 20
+node 7 send 20
+node 8 send 21
+node 9 send 19
+node 10 send 19
+node 11 send 20
+node 12 send 17
+node 13 send 16
+node 14 send 17
+node 15 send 20
+total transmission 303
+
+server-windowsize is 100 
+server cost time 8.804624080657959 
+server+max edge time 8.832549810409546
+
+server-windowsize is 300 
+server cost time 8.56315302848816 
+server+max edge time 8.591078758239746
+
+server-windowsize is 500 
+server cost time 8.715463399887085 
+server+max edge time 8.743389129638672
+
+server-windowsize is 700 
+server cost time 8.721412181854248 
+server+max edge time 8.749337911605835
+
+------ amount of nodes : 16 -------
+edge-windowsize is 700 
+node number 1 get 7 data process 0.008975744247436523 second
+node number 2 get 7 data process 0.003989458084106445 second
+node number 3 get 7 data process 0.0049936771392822266 second
+node number 4 get 7 data process 0.00498652458190918 second
+node number 5 get 6 data process 0.0049855709075927734 second
+node number 6 get 6 data process 0.001994609832763672 second
+node number 7 get 6 data process 0.0019943714141845703 second
+node number 8 get 6 data process 0.0029897689819335938 second
+node number 9 get 6 data process 0.003983259201049805 second
+node number 10 get 6 data process 0.0019948482513427734 second
+node number 11 get 6 data process 0.0029871463775634766 second
+node number 12 get 6 data process 0.006981372833251953 second
+node number 13 get 6 data process 0.003988981246948242 second
+node number 14 get 6 data process 0.0019941329956054688 second
+node number 15 get 6 data process 0.0019948482513427734 second
+node number 16 get 6 data process 0.0029914379119873047 second
+the slowest edge is :1
+edge max time is 0.008975744247436523
+total edge mean is 0.003864109516143799 
+
+-- Transmission cost with sliding-windows 700--
+node 0 send 18
+node 1 send 17
+node 2 send 27
+node 3 send 21
+node 4 send 15
+node 5 send 16
+node 6 send 20
+node 7 send 20
+node 8 send 21
+node 9 send 19
+node 10 send 19
+node 11 send 20
+node 12 send 17
+node 13 send 16
+node 14 send 17
+node 15 send 20
+total transmission 303
+
+server-windowsize is 100 
+server cost time 8.809054374694824 
+server+max edge time 8.81803011894226
+
+server-windowsize is 300 
+server cost time 8.62887191772461 
+server+max edge time 8.637847661972046
+
+server-windowsize is 500 
+server cost time 8.611260890960693 
+server+max edge time 8.62023663520813
+
+server-windowsize is 700 
+server cost time 8.661051034927368 
+server+max edge time 8.670026779174805
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11773061752319336 second
+node number 2 get 50 data process 0.15470147132873535 second
+the slowest edge is :2
+edge max time is 0.15470147132873535
+total edge mean is 0.13621604442596436 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 335
+node 1 send 295
+total transmission 630
+
+server-windowsize is 100 
+server cost time 0.9129228591918945 
+server+max edge time 1.0676243305206299
+
+server-windowsize is 300 
+server cost time 0.9517176151275635 
+server+max edge time 1.1064190864562988
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 5000 data process 13.138221502304077 second
+node number 2 get 5000 data process 12.894256114959717 second
+the slowest edge is :1
+edge max time is 13.138221502304077
+total edge mean is 13.016238808631897 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 34863
+node 1 send 34388
+total transmission 69251
+
+------ amount of nodes : 2 -------
+edge-windowsize is 100 
+node number 1 get 50 data process 0.11501479148864746 second
+node number 2 get 50 data process 0.10571551322937012 second
+the slowest edge is :1
+edge max time is 0.11501479148864746
+total edge mean is 0.11036515235900879 
+
+-- Transmission cost with sliding-windows 100--
+node 0 send 330
+node 1 send 333
+total transmission 663
+
+server-windowsize is 100 
+server cost time 0.5096375942230225 
+server+max edge time 0.6246523857116699
+
+server-windowsize is 300 
+server cost time 0.5975353717803955 
+server+max edge time 0.712550163269043
+
+server-windowsize is 500 
+server cost time 0.6277916431427002 
+server+max edge time 0.7428064346313477
+
+server-windowsize is 700 
+server cost time 0.5600979328155518 
+server+max edge time 0.6751127243041992
+
+------ amount of nodes : 2 -------
+edge-windowsize is 300 
+node number 1 get 50 data process 0.8008565902709961 second
+node number 2 get 50 data process 0.792489767074585 second
+the slowest edge is :1
+edge max time is 0.8008565902709961
+total edge mean is 0.7966731786727905 
+
+-- Transmission cost with sliding-windows 300--
+node 0 send 467
+node 1 send 491
+total transmission 958
+
+server-windowsize is 100 
+server cost time 2.2296111583709717 
+server+max edge time 3.0304677486419678
+
+server-windowsize is 300 
+server cost time 2.263448715209961 
+server+max edge time 3.064305305480957
+
+server-windowsize is 500 
+server cost time 2.314397096633911 
+server+max edge time 3.1152536869049072
+
+server-windowsize is 700 
+server cost time 2.2860186100006104 
+server+max edge time 3.0868752002716064
+
+------ amount of nodes : 2 -------
+edge-windowsize is 500 
+node number 1 get 50 data process 1.1884620189666748 second
+node number 2 get 50 data process 1.1845314502716064 second
+the slowest edge is :1
+edge max time is 1.1884620189666748
+total edge mean is 1.1864967346191406 
+
+-- Transmission cost with sliding-windows 500--
+node 0 send 469
+node 1 send 493
+total transmission 962
+
+server-windowsize is 100 
+server cost time 3.297442674636841 
+server+max edge time 4.485904693603516
+

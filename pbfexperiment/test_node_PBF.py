@@ -1,17 +1,14 @@
 from calendar import c
 from copy import copy,deepcopy
-import os, sys
 from tracemalloc import stop
 import matplotlib.pyplot as plt
-sys.path.append(os.path.abspath(os.pardir))
-import csv
-here = os.path.dirname(os.path.abspath(__file__))
-import pickle
 import time
+import csv
+import pickle
+import os, sys
+sys.path.append(os.path.abspath(os.pardir))
+here = os.path.dirname(os.path.abspath(__file__))
 
-# from data.dataClass import Data, batchImport
-# from skyline.slideUPSky import slideUPSky
-# from skyline.PSky import PSky
 class PSky():
     def __init__(self, count ,dim, ps, radius, drange, wsize):
         """
@@ -215,6 +212,7 @@ class pbfsky(PSky):
             d is all information l is the location that for calculate dominate
         """
         if len(self.window) >= self.wsize:
+            self.outdated.append(self.window[0])
             del self.window[0]
             
             del self.locationwindow[0]
@@ -286,6 +284,8 @@ class pbfsky(PSky):
         self.skyline = clean
         self.skyline2 = s2temp
         
+        ## clear outdated temp for test_node-prpo
+        self.outdated.clear()
         
     def showSkyline(self,ll,i):
         #figure show
@@ -299,7 +299,7 @@ class pbfsky(PSky):
  
 # PSky class use only in server side 
 class servePSky(PSky):
-    def __init__(self, dim, ps, radius, drange=[0,1000], wsize=100):
+    def __init__(self, count,dim, ps, radius, drange=[0,1000], wsize=300):
         """
         Initializer
 
@@ -316,7 +316,7 @@ class servePSky(PSky):
             Size of sliding window.
             Note that the window size should be sum(edge window)
         """
-        PSky.__init__(self, dim, ps, radius, drange, wsize)
+        PSky.__init__(self,count, dim, ps, radius, drange, wsize)
     def receive(self,data):
         """
         Update data received by server
@@ -329,26 +329,38 @@ class servePSky(PSky):
         """
         # print("data list is",data)
         # print("data[0] list is",data[0])
+        
         if len(data[0]['Delete']) > 0:
+            # print("\n------------\nbefore del self.window",len(self.window),self.window)
+            # print("\nbefore del self.locationwindow",self.locationwindow)
+        
             # print("get in delete")
             for d in data[0]['Delete']:
                 # print("in recieve delete",d)
                 if d in self.window:
                     self.window.remove(d)
-                    self.outdated.append(d)
-                    self.updateIndex(d, 'remove')
-                    
+                    self.locationwindow.remove(d.locations)
+                    # self.outdated.append(d)
+                    # self.updateIndex(d, 'remove')
+        
+            # print("\nafter del self.window",len(self.window),self.window)
+            # print("\nafter del self.locationwindow",self.locationwindow,"\n------------\n")
+        
+           
         if len(data[0]['SK1']) > 0:
             # print("get in sk1")
             for d in data[0]['SK1']:
-                # print("in recieve sk1",d)
+                # print("in recieve sk1 ",d)
+                # print("in recieve sk1 location",d.locations)
+                # print("------------")
                 if d not in self.window:
                     self.window.append(d)
-                    self.skyline.append(d)
-                    self.updateIndex(d, 'insert')
-                elif d in self.skyline2:
-                    self.skyline2.remove(d)
-                    self.skyline.append(d)
+                    self.locationwindow.append(d.locations)
+                    # self.skyline.append(d)
+                    # self.updateIndex(d, 'insert')
+                # elif d in self.skyline2:
+                #     self.skyline2.remove(d)
+                #     self.skyline.append(d)
                 # ignore other condition
         if len(data[0]['SK2']) > 0:
             # print("get in sk2")
@@ -356,54 +368,76 @@ class servePSky(PSky):
                 # print("in recieve sk2",d)
                 if d not in self.window:
                     self.window.append(d)
-                    self.skyline2.append(d)
-                    self.updateIndex(d, 'insert')
-                elif d in self.skyline:
-                    self.skyline.remove(d)
-                    self.skyline2.append(d)
+                    self.locationwindow.append(d.locations)
+                    # self.skyline2.append(d)
+                    # self.updateIndex(d, 'insert')
+                # elif d in self.skyline:
+                #     self.skyline.remove(d)
+                #     self.skyline2.append(d)
                 # ignore other condition
-        self.update()
+        # self.update()
     def update(self):
-        """
-        Update global skyline set
-        """
-        if len(self.outdated) > 0:
-            # Remove outdated data in sk2
-            for d in self.outdated:
-                if d in self.skyline2:
-                    self.skyline2.remove(d)
-            # Remove outdated data in sk, add sk2 data to sk when needed
-            for d in self.outdated:
-                if d in self.skyline:
-                    self.skyline.remove(d)
-                    sstart = [ i for i in d.getLocationMax()]
-                    send = [self.drange[1] for i in range(self.dim)]
-                    search = [ p.object for p in (self.index.intersection(tuple(sstart+send),objects=True))]
-                    for sd in search:
-                        if sd in self.skyline2:
-                            self.skyline2.remove(sd)
-                            self.skyline.append(sd)
-            # Clear outdated data
-            self.outdated = []
-        # prune objects in sk, move data dominated by other sk point to sk2
-        for d in self.skyline.copy():
-            if d in self.skyline:
-                vurstart = [ self.drange[1] if i+2*self.radius+0.1 > self.drange[1] else i+2*self.radius+0.1 for i in d.getLocationMax()]
-                vurend = [ self.drange[1] for i in range(self.dim)]
-                vur = [ p.object for p in (self.index.intersection(tuple(vurstart+vurend),objects=True))]
-                for p in vur:
-                    if p in self.skyline:
-                        self.skyline.remove(p)
-                        self.skyline2.append(p)
-        # prune objects in sk2
-        for d in self.skyline2.copy():
-            if d in self.skyline2:
-                vurstart = [ self.drange[1] if i+2*self.radius+0.1 > self.drange[1] else i+2*self.radius+0.1 for i in d.getLocationMax()]
-                vurend = [ self.drange[1] for i in range(self.dim)]
-                vur = [ p.object for p in (self.index.intersection(tuple(vurstart+vurend),objects=True))]
-                for p in vur:
-                    if p in self.skyline2:
-                       self.skyline2.remove(p)
+        
+
+        clean = [] #for skyline 1
+        clean_location = []
+        
+        pruned = [] #for skyline 2 canditate
+        pruned_location = []
+        
+        s2temp=[] #for skyline2
+        deltemp=[]
+        deltemp2=[]
+        for c1 in range(len(self.locationwindow)):
+            for c2 in range(0,len(self.locationwindow),1):
+                tag1 = 0
+                for op in range(self.ps):
+                    for np in range(self.ps):
+                        jumptag1 = 0
+                        for d in range(self.dim):
+                            if  self.locationwindow[c2][np][d] < self.locationwindow[c1][op][d]:
+                                tag1=tag1+1
+                            else:
+                                jumptag1=jumptag1+1
+                          
+                if tag1 == self.ps*self.ps*self.dim:
+                    deltemp.append(c1) 
+                else:
+                    continue   
+        for dele in range(len(self.window)):
+            if dele not in deltemp:
+                clean.append(self.window[dele])
+                clean_location.append(self.locationwindow[dele])
+            else:
+                # if it need to be del it will be the skyline2canditate so we could put those into prune
+                pruned.append(self.window[dele])
+                pruned_location.append(self.locationwindow[dele])
+         
+        for p1 in range(len(pruned_location)):
+            for p2 in range(0,len(pruned_location),1):
+                tag2 = 0
+                for op2 in range(self.ps):
+                    for np2 in range(self.ps):
+                        jumptag2 = 0
+                        for dd in range(self.dim):
+                            if  pruned_location[p2][np2][dd] < pruned_location[p1][op2][dd]:
+                                tag2=tag2+1
+                            else:
+                                jumptag2=jumptag2+1
+                          
+                if tag2 == self.ps*self.ps*self.dim:
+                    deltemp2.append(p1) 
+                else:
+                    continue        
+        
+        for dele2 in range(len(pruned)):
+            if dele2 not in deltemp2:
+                s2temp.append(pruned[dele2])
+            else:
+                continue
+        
+        self.skyline = clean
+        self.skyline2 = s2temp
 
 def batchImport(csvfile, ps):
     """
@@ -458,22 +492,21 @@ if __name__ == "__main__":
                 
             for k in range(edgenum):
                 eid = str(k)
-                usky = pbfsky(10000,2, 5, 5, [0,1000], wsize=ew/10)
-                dqueue = batchImport('100_dim2_pos5_rad5_01000.csv', 5)
+                usky = pbfsky(100,2, 5, 5, [0,1000], wsize=ew/10)
 
-                idx = [i for i in range(100) if i%edgenum == k]
+                indata = batchImport('10000_dim2_pos5_rad5_01000.csv',usky.ps)
+                dqueue = indata[0] #turn inputlist to dqueue
+                locatlist = indata[1] #location for
+        
+                idx = [i for i in range(usky.count) if i%edgenum == k]
                 with open('pickle_edge'+eid+'.pickle', 'wb') as f:
                     start_time = time.time()
                     for i in idx:
-                        # oldsk = usky.getSkyline().copy()
-                        # oldsk2 = usky.getSkyline2().copy()
-                        usky.receiveData(dqueue[i])
+                        usky.receiveData(dqueue[i],locatlist[i])
                         out = usky.getOutdated().copy()
                         usky.updateSkyline()
-                        # usk1 = list(set(usky.getSkyline())-set(oldsk))
-                        # usk2 = list(set(usky.getSkyline2())-set(oldsk2))
-                        usk1 = set(usky.getSkyline())
-                        usk2 = set(usky.getSkyline2())
+                        usk1 = list(usky.getSkyline())
+                        usk2 = list(usky.getSkyline2())
                         result = {'Delete':out,'SK1':usk1,'SK2':usk2}
                         pickle.dump(result, f)
                         # print("result is ",result)
@@ -486,9 +519,7 @@ if __name__ == "__main__":
                     etmax.append(finish_time)
                     print("edge",k+1,"process --- %s seconds ---" % (finish_time))
                     r.write('node number {a} get {b} data process {c} second\n'.format(a=k+1,b=len(idx),c=finish_time))
-                    
-                usky.removeRtree()
-                
+                                    
             r.write('the slowest edge is :{a}\nedge max time is {b}\ntotal edge mean is {c} \n\n'
                         .format(a=(etmax.index(max(etmax))+1),b=max(etmax),c=(sum(etmax)/len(etmax))))
             # exit()
@@ -496,7 +527,7 @@ if __name__ == "__main__":
             edgedata =[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
             templist =[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
             for e in range(edgenum):
-                idx = [i for i in range(100) if i%edgenum == e]
+                idx = [i for i in range(usky.count) if i%edgenum == e]
             
                 with open('pickle_edge'+str(e)+'.pickle', 'rb') as f:
                     for d in idx:
@@ -504,30 +535,38 @@ if __name__ == "__main__":
             
             templist=deepcopy(edgedata) #for wsize test
             
-            ###catch communication load
+            # for i in range(usky.ps):
+            #     print("edgedata[0][1]['SK1'][0].locations[0]",edgedata[0][1]['SK1'][0].locations[i])
             
+            
+            ###catch communication load
+            sdatalist =[]
+            r.write('-- Transmission cost with sliding-windows {a}--\n'.format(a=ew))
             for k in range(edgenum):
-                print("\n\n")
+                # print("\n\n")
+                sdata =0
                 for m in range(len(templist[k])):
-                    print("templist",k,"-",m,templist[k][m])
-                    print("delete len",len(templist[k][m]['Delete']))
-                    print("SK1 len",len(templist[k][m]['SK1']))
-                    print("SK2 len",len(templist[k][m]['SK2']))
+                                       
+                    stemp = len(templist[k][m]['Delete'])+len(templist[k][m]['SK1'])+len(templist[k][m]['SK2'])
+
+                    sdata =sdata + stemp
                     
-                    # for d in templist[k][m]['SK2']:
-                    #     print("sk2",d,"---------------\n")
-                    # h =templist[k][m][0]
-                    # print("len",h)
+                print("node ", k, "send", sdata) 
+                r.write('node {a} send {b}\n'.format(a=k,b=sdata))
+                sdatalist.append(sdata)
+            
+            print("total transmission", sum(sdatalist))
+            r.write('total transmission {a}\n\n'.format(a=sum(sdatalist) ))
             
             # exit()
             
             ###localserver
             for sw in (100,300,500,700):#for wsize test
                 
-                skyServer = servePSky(2, 5, 5, drange=[0,1000], wsize=sw)
+                skyServer = servePSky(usky.count,2, 5, 5, drange=[0,1000], wsize=sw)
                 server_time = time.time()-time.time() # let time be 0
                                    
-                for k in range(100):
+                for k in range(skyServer.count):
                     # pop list node by node
                     m = k % edgenum # node by node            
                     start_time = time.time()
@@ -540,15 +579,10 @@ if __name__ == "__main__":
                 
                 print("server-windowsize is",sw)
                 print("--- finish --- %s seconds ---" % (server_time))
-                skyServer.removeRtree()
+                # skyServer.removeRtree()
             
                 edgedata =[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]#for wsize test
-                edgedata=deepcopy(templist)#for wsize test 
-            
-            # for cml in range(edgenum):
-            #     print("edge",cml,"upload ",len(templist[cml]))
-            
-            
+                edgedata=deepcopy(templist)#for wsize test        
             
                 ### write into the file
                 r.write('server-windowsize is {a} \n'
