@@ -16,3 +16,11 @@ win size:700 ; time:104241.08149623871
 win size:800 ; time:136420.96403574944
 ========== Data window_size = 900 ==========
 win size:900 ; time:172977.7625029087
+========== Data window_size = 1000 ==========
+win size:1000 ; time:213377.43686795235
+========== Data win size = 100 ==========
+Avg. sky1:6.4094 ; Avg. sky2:7.7514
+========== Data win size = 200 ==========
+Avg. sky1:8.3854 ; Avg. sky2:10.2225
+========== Data win size = 300 ==========
+Avg. sky1:10.1084 ; Avg. sky2:12.1376
