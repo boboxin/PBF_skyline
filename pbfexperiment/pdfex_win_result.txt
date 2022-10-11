@@ -24,3 +24,13 @@ Avg. sky1:6.4094 ; Avg. sky2:7.7514
 Avg. sky1:8.3854 ; Avg. sky2:10.2225
 ========== Data win size = 300 ==========
 Avg. sky1:10.1084 ; Avg. sky2:12.1376
+========== Data win size = 400 ==========
+Avg. sky1:11.7001 ; Avg. sky2:13.6754
+========== Data win size = 500 ==========
+Avg. sky1:13.0641 ; Avg. sky2:15.1035
+========== Data win size = 600 ==========
+Avg. sky1:14.4969 ; Avg. sky2:16.4654
+========== Data win size = 700 ==========
+Avg. sky1:15.8502 ; Avg. sky2:17.722
+========== Data win size = 800 ==========
+Avg. sky1:17.1197 ; Avg. sky2:18.909
