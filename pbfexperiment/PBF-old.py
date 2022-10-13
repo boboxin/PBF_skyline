@@ -291,6 +291,27 @@ class pbfsky(PSky):
         plt.xlim(0,1000)
         plt.ylim(0,1000)
         
+def gravity(cgarray,ps,dim):
+    tg=[]
+    for d in range(dim):
+        tg.append(0)
+        
+    temp=0
+    gravitylist=[]
+    for k in range(100): #100 is the data count
+        for i in range(ps): # ps is the possible instance
+            tg=cgarray[temp+i]+tg
+
+        tg=tg/ps # ps is the possible instance
+        ltg=tg.tolist()
+        gravitylist.append(ltg)
+        tg=[]
+        for d in range(dim):
+            tg.append(0)
+        temp= temp +ps # ps is the possible instance
+        
+    return gravitylist
+
 def batchImport(csvfile, ps):
     """
     Import data objects using csv file.
@@ -331,13 +352,24 @@ def batchImport(csvfile, ps):
     
 if __name__ == '__main__':
     
-    tbsky = pbfsky(10000,2, 5, 5, [0,1000], wsize=300)
-    indata = batchImport('10000_dim2_pos5_rad5_01000.csv',tbsky.ps)
+    tbsky = pbfsky(100,2, 5, 5, [0,1000], wsize=300)
+    indata = batchImport('100_dim2_pos5_rad5_01000.csv',tbsky.ps)
     dqueue = indata[0] #turn inputlist to dqueue
     locatlist = indata[1] #location for
+        
+    ### locatlist is the list include location
+    print("------------")
+    for i in range(100):
+        print("dqueue ",i,dqueue[i].locations)
+        for p in range(tbsky.ps):
+            print("locatlist ",i,locatlist[i][p])
+            # for dm in range(tbsky.dim):
+            #     print("locatlist ",i,"dm",dm,locatlist[i][p][dm])
+    # print(locatlist)
+    # plt.figure(0,figsize=(20,20))
     
     start_time= time.time()
-    for i in range(10000):
+    for i in range(100):
         
         tbsky.receiveData(dqueue[i],locatlist[i])
         tbsky.updateSkyline()
