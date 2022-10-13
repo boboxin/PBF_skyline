@@ -34,3 +34,5 @@ Avg. sky1:14.4969 ; Avg. sky2:16.4654
 Avg. sky1:15.8502 ; Avg. sky2:17.722
 ========== Data win size = 800 ==========
 Avg. sky1:17.1197 ; Avg. sky2:18.909
+========== Data win size = 900 ==========
+Avg. sky1:18.3653 ; Avg. sky2:20.0439
