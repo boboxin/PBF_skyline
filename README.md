@@ -51,7 +51,7 @@
   - 比較方法
   1. 邊緣輔助平行不確定天際線（EPUS）。
   2. Parallel R-tree Pruning Only (PRPO).
-  3. Parallel Grid-index Pruning Only (PRGO).
+  3. Parallel Grid-index Pruning Only (PGPO).
   4. Parallel Brute-Force (PBF).
 
   - Performance metrics:
