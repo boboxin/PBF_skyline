@@ -312,7 +312,11 @@ class servePSky(PSky):
                 if d not in self.window:
                     self.window.append(d)
                     self.locationwindow.append(d.locations)
-                    
+        
+        while(len(self.window) > self.wsize):
+            del self.window[0]
+            del self.locationwindow[0]
+                 
                     
     def update(self):
         
@@ -466,33 +470,34 @@ if __name__ == "__main__":
             # exit()
             
             ###localserver
-            for sw in (100,300,500,700):#for wsize test
+            # for sw in (100,300,500,700):#for wsize test
+            # defult sw=ew*edge_num
+            sw = ew*edgenum
+            skyServer = servePSky(usky.count,2, 5, 5, drange=[0,1000], wsize=sw)
+            server_time = time.time()-time.time() # let time be 0
+                                
+            for k in range(skyServer.count):
+                # pop list node by node
+                m = k % edgenum # node by node            
+                start_time = time.time()
+                skyServer.receive(edgedata[m])
+                skyServer.update()
+                t=time.time() - start_time # just calculate the recieve and update time
+                server_time = server_time+t
+                edgedata[m].pop(0)
                 
-                skyServer = servePSky(usky.count,2, 5, 5, drange=[0,1000], wsize=sw)
-                server_time = time.time()-time.time() # let time be 0
-                                   
-                for k in range(skyServer.count):
-                    # pop list node by node
-                    m = k % edgenum # node by node            
-                    start_time = time.time()
-                    skyServer.receive(edgedata[m])
-                    skyServer.update()
-                    t=time.time() - start_time # just calculate the recieve and update time
-                    server_time = server_time+t
-                    edgedata[m].pop(0)
-                    
-                
-                print("server-windowsize is",sw)
-                print("--- finish --- %s seconds ---" % (server_time))
-                # skyServer.removeRtree()
             
-                edgedata =[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]#for wsize test
-                edgedata=deepcopy(templist)#for wsize test        
-            
-                ### write into the file
-                r.write('server-windowsize is {a} \n'
-                            .format(a=sw))
-                r.write('server cost time {a} \n'
-                            .format(a=server_time))
-                r.write('server+max edge time {a}\n\n'.format(a=server_time+max(etmax)))
-                print("Output write into ",path)
+            print("server-windowsize is",sw)
+            print("--- finish --- %s seconds ---" % (server_time))
+            # skyServer.removeRtree()
+        
+            edgedata =[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]#for wsize test
+            edgedata=deepcopy(templist)#for wsize test        
+        
+            ### write into the file
+            r.write('server-windowsize is {a} \n'
+                        .format(a=sw))
+            r.write('server cost time {a} \n'
+                        .format(a=server_time))
+            r.write('server+max edge time {a}\n\n'.format(a=server_time+max(etmax)))
+            print("Output write into ",path)
