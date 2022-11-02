@@ -43,7 +43,9 @@ def radius_avgsk():
     radius = [4, 6, 8, 10, 12, 14, 16, 18, 20]
     for r in radius:
         path = 'pdfex_radius_result-nosk2.txt'
+        path2 = 'pdfex_radius_skresult.txt'
         f = open(path,'a+')
+        f2 = open(path2,'a+')
         indata = batchImport('10000_dim2_pos5_rad'+str(r)+'_01000.csv', 5)
         dqueue = indata[0] #turn inputlist to dqueue
         locatlist = indata[1] #location for
@@ -51,12 +53,16 @@ def radius_avgsk():
         print('========== radius = '+ str(r) + ' ==========')
         print('---------- Brute force ----------')
         tbsky = pbfsky(10000,2, 5, r, [0,1000], wsize=300)
-        
+        f2.write('========== Data radius = {a} ==========\n' . format(a=tbsky.radius))
         avgsk1, avgsk2 = 0, 0
         for i in range(10000):
             tbsky.receiveData(dqueue[i],locatlist[i])
             tbsky.updateSkyline()
             avgsk1 += len(tbsky.getSkyline())
+            f2.write('\n========== time slot = {a} ==========\n' . format(a=i))
+            f2.write('skyilne size : {a}\n'  . format(a=len(tbsky.getSkyline())))
+            for s1 in tbsky.getSkyline():
+                f2.write('{a}\n'  . format(a=s1))
             # avgsk2 += len(tbsky.getSkyline2())
         # tbsky.removeRtree()
         avgsk1 = avgsk1/10000

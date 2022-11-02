@@ -39,7 +39,9 @@ def instance_avgsk():
     inst = [3, 4, 5, 6, 7, 8, 9, 10]
     for ins in inst:
         path = 'pdfex_inst_result-nosk2.txt'
+        path2 = 'pdfex_inst_skresult.txt'
         f = open(path,'a+')
+        f2 = open(path2,'a+')
         indata = batchImport('10000_dim2_pos'+str(ins)+'_rad5_01000.csv', ins)
         dqueue = indata[0] #turn inputlist to dqueue
         locatlist = indata[1] #location for
@@ -48,12 +50,16 @@ def instance_avgsk():
         print('========== instance count = '+ str(ins) + ' ==========')
         print('---------- Brute force ----------')
         tbsky = pbfsky(10000,2, ins, 5, [0,1000], wsize=300)
-        
+        f2.write('========== Data instance = {a} ==========\n' . format(a=tbsky.ps))
         avgsk1, avgsk2 = 0, 0
         for i in range(10000):
             tbsky.receiveData(dqueue[i],locatlist[i])
             tbsky.updateSkyline()
             avgsk1 += len(tbsky.getSkyline())
+            f2.write('\n========== time slot = {a} ==========\n' . format(a=i))
+            f2.write('skyilne size : {a}\n'  . format(a=len(tbsky.getSkyline())))
+            for s1 in tbsky.getSkyline():
+                f2.write('{a}\n'  . format(a=s1))
             # avgsk2 += len(tbsky.getSkyline2())
         # tbsky.removeRtree()
         avgsk1 = avgsk1/10000

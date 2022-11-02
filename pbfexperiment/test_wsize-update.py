@@ -44,14 +44,21 @@ def wsize_avgsk():
     for w in wsize:
         print('========== window size = '+ str(w) + ' ==========')
         print('---------- Brute force ----------')
+        path = 'pdfex_win_result-nosk2.txt'
+        path2 = 'pdfex_win_skresult.txt'
+        f = open(path,'a+')
+        f2 = open(path2,'a+')
         tbsky = pbfsky(10000,2, 5, 5, [0,1000], wsize=w)
         avgsk1, avgsk2 = 0, 0
-        path = 'pdfex_win_result-nosk2.txt'
-        f = open(path,'a+')
+        f2.write('========== Data win size = {a} ==========\n' . format(a=tbsky.wsize))
         for i in range(10000):
             tbsky.receiveData(dqueue[i],locatlist[i])
             tbsky.updateSkyline()
             avgsk1 += len(tbsky.getSkyline())
+            f2.write('\n========== time slot = {a} ==========\n' . format(a=i))
+            f2.write('skyilne size : {a}\n'  . format(a=len(tbsky.getSkyline())))
+            for s1 in tbsky.getSkyline():
+                f2.write('{a}\n'  . format(a=s1))
             # avgsk2 += len(tbsky.getSkyline2())
         avgsk1 = avgsk1/10000
         # avgsk1, avgsk2 = avgsk1/10000, avgsk2/10000
